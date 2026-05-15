@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business Advisory | Essensia Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: { "surface-container-low":"#EAE4F5","surface-container-highest":"#CCBFE5","secondary-container":"#DDD5F0","surface-container-high":"#D8CEEC","on-primary":"#ffffff","on-surface":"#1A1A2E","primary":"#5B2D8E","primary-fixed-dim":"#C4A8E8","primary-fixed":"#EDE9F7","surface-container":"#E4DCF5","primary-container":"#7B3FC4","on-background":"#1A1A2E","on-primary-container":"#FFFFFF","surface":"#EDE9F7","background":"#EDE9F7","secondary":"#4A4470","inverse-surface":"#1A1A2E","outline":"#6B5E8A","outline-variant":"#C4B8DC","surface-variant":"#CCBFE5","inverse-primary":"#C4A8E8","surface-container-lowest":"#ffffff","on-surface-variant":"#3D3060" },
+        borderRadius: { "DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","2xl":"1rem","3xl":"1.5rem","full":"9999px" },
+        spacing: { "xl":"80px","gutter":"24px","base":"8px","margin":"32px","xs":"4px","lg":"48px","md":"24px","sm":"12px" },
+        fontFamily: { "sans":["Outfit","system-ui","sans-serif"],"body-lg":["Outfit"],"label-sm":["Outfit"],"label-md":["Outfit"],"body-md":["Outfit"],"display-lg":["Outfit"],"headline-md":["Outfit"],"headline-lg":["Outfit"] },
+        fontSize: { "body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"1.2","fontWeight":"500"}],"label-md":["14px",{"lineHeight":"1.2","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}],"display-lg":["52px",{"lineHeight":"1.05","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"1.3","fontWeight":"600"}],"headline-lg":["34px",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}] }
+      }
+    }
+  }
+</script>
+<style>
+  :root { --expo: cubic-bezier(0.16, 1, 0.3, 1); }
+  body { font-family: 'Outfit', system-ui, sans-serif; background-color: #EDE9F7; color: #1A1A2E; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 0.75s var(--expo), transform 0.75s var(--expo); }
+  [data-reveal].in-view { opacity: 1; transform: translateY(0); }
+  [data-delay="1"] { transition-delay: 0.08s; } [data-delay="2"] { transition-delay: 0.16s; } [data-delay="3"] { transition-delay: 0.24s; }
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; bottom:-3px; left:0; right:0; height:1.5px; background:currentColor; transform-origin:left; transform:scaleX(0); transition:transform 0.3s var(--expo); }
+  .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+  .bento-card { transition: transform 0.45s var(--expo), box-shadow 0.45s var(--expo); will-change: transform; }
+  .bento-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -16px rgba(91,45,142,0.14); }
+  .btn-primary { transition: transform 0.15s var(--expo), opacity 0.2s ease; }
+  .btn-primary:hover { opacity: 0.93; } .btn-primary:active { transform: translateY(1px) scale(0.985); }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5B2D8E; opacity:0.7; }
+  .benefit-row { transition: background 0.3s var(--expo); border-radius: 0.75rem; }
+  .benefit-row:hover { background: rgba(255,255,255,0.9); padding-left: 1rem; padding-right: 1rem; }
+  .img-hover { overflow: hidden; }
+  .img-hover img { transition: transform 0.6s var(--expo); }
+  .img-hover:hover img { transform: scale(1.04); }
+</style>
+</head>
+<body class="font-sans text-on-background">
+
+<header class="bg-white/96 backdrop-blur-sm sticky top-0 z-50 border-b border-outline-variant/60">
+  <div style="background:rgba(91,45,142,0.06); border-bottom:1px solid rgba(91,45,142,0.08);">
+    <div class="max-w-[1320px] mx-auto px-6 py-1.5 flex justify-end">
+      <p class="text-xs font-medium" style="color:#5B2D8E;opacity:0.7;">Registered Company No. 15544886</p>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Home</a>
+      <a href="about.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">About</a>
+      <div class="relative group">
+        <button class="nav-link active text-primary text-sm font-semibold flex items-center gap-1">Services <span class="material-symbols-outlined" style="font-size:15px;">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-3 w-52 bg-white border border-outline-variant rounded-2xl shadow-xl py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible" style="transition:opacity 0.2s ease;">
+          <a href="business-advisory.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-primary bg-surface-container-low rounded-xl mx-1">Business Advisory</a>
+          <a href="hr-services.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">HR Services</a>
+          <a href="compliance.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">Compliance &amp; Risk</a>
+        </div>
+      </div>
+      <a href="resources-coming-soon.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Resources</a>
+      <a href="contact.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn-primary hidden md:inline-block bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-semibold">Get Started</a>
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-secondary hover:text-on-surface transition-colors">
+        <span id="mob-open" class="material-symbols-outlined">menu</span>
+        <span id="mob-close" class="material-symbols-outlined hidden">close</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/50 px-6 py-6 space-y-1">
+    <a href="index.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">Home</a>
+    <a href="about.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">About</a>
+    <div class="border-b border-outline-variant/30">
+      <p class="py-3 text-sm font-semibold text-on-surface">Services</p>
+      <div class="pl-4 pb-3 space-y-2">
+        <a href="business-advisory.html" class="block text-sm text-primary font-semibold py-1">Business Advisory</a>
+        <a href="hr-services.html" class="block text-sm text-secondary/70 hover:text-primary py-1">HR Services</a>
+        <a href="compliance.html" class="block text-sm text-secondary/70 hover:text-primary py-1">Compliance &amp; Risk</a>
+      </div>
+    </div>
+    <a href="resources-coming-soon.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">Resources</a>
+    <a href="contact.html" class="block py-3 text-sm font-semibold text-secondary">Contact</a>
+    <a href="contact.html" class="block bg-primary-container text-on-primary-container text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Get Started</a>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="py-24 bg-white">
+  <div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-16 items-center">
+    <div>
+      <span data-reveal class="section-label">Executive Advisory</span>
+      <h1 data-reveal data-delay="1" class="font-bold text-on-surface mt-3" style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.06;letter-spacing:-0.035em;">
+        Support for every stage of your business
+      </h1>
+      <p data-reveal data-delay="2" class="text-secondary mt-6" style="font-size:17px;line-height:1.65;max-width:50ch;">
+        Navigate the complexities of organisational growth with precision. From founding principles to scaling operations, we provide the strategic framework for sustained success.
+      </p>
+      <div data-reveal data-delay="3" class="flex flex-wrap gap-3 mt-8">
+        <a href="contact.html" class="btn-primary bg-primary-container text-on-primary-container px-7 py-3.5 rounded-full font-semibold text-sm">Book a Consultation</a>
+        <a href="#how-we-work" class="border border-primary-container/60 text-primary px-7 py-3.5 rounded-full font-semibold text-sm" style="transition:background 0.25s ease;">Our Approach</a>
+      </div>
+    </div>
+    <div data-reveal data-delay="2" class="img-hover rounded-3xl overflow-hidden border border-outline-variant/40 shadow-xl hidden lg:block" style="box-shadow:0 32px 64px -20px rgba(91,45,142,0.18);">
+      <img class="w-full h-auto object-cover aspect-[4/5]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkea5PwBjzUBIt6yTEZfBGJghmIRsfP28n11_zWZ17ZCsBXxTzbjpClXq0WRjigQdfUZo5X2gFEX1r0KOHu5g-sHOTfZOWrqgvOrABtAHyAMsuDlKSjYBBcbCmNgLkDeqjr3KoAg-MNBeTKngFE6j3bD9kv_o3-9YDInCW1PaqrnknGA5m3Lg7D-oBF3EmImv4gdDxwgk5wMLRcw_25Skeo4Y9xfCXHfPRlwACA0ptwRtYCSRUtY4Bk_Grd1qRyvHeF_n3JeUodg" alt="Modern skyscraper representing corporate stability and high-level business strategy"/>
+    </div>
+  </div>
+</section>
+
+<!-- Strategic Growth Framework -->
+<section class="py-xl" style="background:#f3f4f8;">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <span class="section-label">Strategic growth framework</span>
+      <h2 class="font-bold text-on-surface mt-3" style="font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-0.025em;line-height:1.1;">Tailored for your current stage</h2>
+      <p class="text-secondary mt-3" style="font-size:15px;max-width:52ch;line-height:1.6;">Advisory designed to meet the unique structural requirements of your business maturity.</p>
+    </div>
+
+    <!-- Equal-size grid: Early, Growing, Scaling (correct order) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div data-reveal class="bento-card bg-white rounded-3xl p-8 flex flex-col border border-outline-variant/40">
+        <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-primary" style="font-size:18px;">rocket_launch</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2" style="font-size:16px;letter-spacing:-0.01em;">Early Stage</h3>
+        <p class="text-secondary mb-4" style="font-size:13px;line-height:1.6;">Setting your business up properly from day one with core legal and operational foundations.</p>
+        <ul class="space-y-1.5 text-xs text-secondary">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-size:13px;">check</span> Clear starting point</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-size:13px;">check</span> Better decision-making</li>
+        </ul>
+      </div>
+      <div data-reveal data-delay="1" class="bento-card rounded-3xl p-8 flex flex-col relative overflow-hidden" style="background:linear-gradient(135deg,#5B2D8E 0%,#1A1A2E 100%);">
+        <div class="absolute inset-0 opacity-10" style="background:radial-gradient(ellipse at 80% 20%,rgba(255,255,255,0.5),transparent 55%);pointer-events:none;"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center mb-5">
+            <span class="material-symbols-outlined text-white" style="font-size:18px;">trending_up</span>
+          </div>
+          <h3 class="font-bold text-white mb-2" style="font-size:16px;letter-spacing:-0.01em;">Growing Stage</h3>
+          <p class="text-white/75 mb-4" style="font-size:13px;line-height:1.6;">Bringing clarity and consistency to rapidly expanding teams and diversifying service lines, before cracks appear.</p>
+          <ul class="space-y-1.5 text-xs text-white/80 mt-auto">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim" style="font-size:13px;">check</span> Consistent operations</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim" style="font-size:13px;">check</span> Better use of resources</li>
+          </ul>
+        </div>
+      </div>
+      <div data-reveal data-delay="2" class="bento-card bg-surface-container-low rounded-3xl p-8 flex flex-col border border-outline-variant/40">
+        <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-primary" style="font-size:18px;">corporate_fare</span>
+        </div>
+        <h3 class="font-bold text-on-surface mb-2" style="font-size:16px;letter-spacing:-0.01em;">Scaling Stage</h3>
+        <p class="text-secondary mb-4" style="font-size:13px;line-height:1.6;">Structuring for growth without sacrificing the culture or control that built your success.</p>
+        <ul class="space-y-1.5 text-xs text-secondary">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-size:13px;">check</span> Growth without losing control</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary" style="font-size:13px;">check</span> Clearer organisational roles</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How We Work -->
+<section id="how-we-work" class="py-xl bg-white">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <!-- Engagement Models -->
+      <div data-reveal>
+        <span class="section-label">Engagement models</span>
+        <h2 class="font-bold text-on-surface mt-3 mb-10" style="font-size:clamp(1.8rem,3.2vw,2.4rem);letter-spacing:-0.025em;line-height:1.1;">How we work</h2>
+        <div class="divide-y divide-outline-variant/50">
+          <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+            <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">calendar_today</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface mb-2" style="font-size:16px;letter-spacing:-0.01em;">Ongoing Advisory</h4>
+              <p class="text-secondary" style="font-size:14px;line-height:1.6;">Long-term partnership acting as your fractional leadership team for continuous strategic oversight.</p>
+            </div>
+          </div>
+          <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+            <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">assignment</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface mb-2" style="font-size:16px;letter-spacing:-0.01em;">Project-Based</h4>
+              <p class="text-secondary" style="font-size:14px;line-height:1.6;">Focused engagements targeting specific organisational challenges or transformation goals.</p>
+            </div>
+          </div>
+          <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+            <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">chat_bubble</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface mb-2" style="font-size:16px;letter-spacing:-0.01em;">One-off Consultations</h4>
+              <p class="text-secondary" style="font-size:14px;line-height:1.6;">High-impact sessions to solve immediate problems or validate strategic directions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance Integration -->
+      <div data-reveal data-delay="1" class="bento-card bg-surface-container-low rounded-3xl p-10 border border-outline-variant/40 flex flex-col">
+        <span class="section-label mb-3">Integrated governance</span>
+        <h2 class="font-bold text-on-surface mb-5" style="font-size:clamp(1.4rem,2vw,1.8rem);letter-spacing:-0.02em;line-height:1.15;">Where compliance fits in</h2>
+        <p class="text-secondary mb-8" style="font-size:15px;line-height:1.7;">
+          Compliance isn't just a hurdle ,  it's the bedrock of business continuity. We integrate regulatory standards into your core strategy, ensuring that as you grow, your risk profile stays managed.
+        </p>
+        <div class="mt-auto grid grid-cols-2 gap-6 pt-8 border-t border-outline-variant/50">
+          <div>
+            <div class="font-bold text-primary mb-1" style="font-size:2rem;letter-spacing:-0.04em;">100%</div>
+            <div class="text-secondary text-xs font-medium uppercase tracking-wider">Regulatory Alignment</div>
+          </div>
+          <div>
+            <div class="font-bold text-primary mb-1" style="font-size:2rem;letter-spacing:-0.04em;">24/7</div>
+            <div class="text-secondary text-xs font-medium uppercase tracking-wider">Risk Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Diagnostic CTA -->
+<section class="py-xl" style="background:#f3f4f8;">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="rounded-3xl p-12 lg:p-16 bg-primary-fixed border border-outline-variant/40 grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center">
+      <div data-reveal>
+        <span class="section-label">Business health check</span>
+        <h2 class="font-bold text-on-surface mt-3 mb-4" style="font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-0.025em;line-height:1.1;">Not sure where your business sits?</h2>
+        <p class="text-secondary" style="font-size:15px;line-height:1.65;max-width:44ch;">Our diagnostic process helps you identify your current maturity level and the specific steps required to reach the next milestone.</p>
+      </div>
+      <div data-reveal data-delay="1" class="flex flex-col gap-3">
+        <a href="contact.html" class="btn-primary bg-primary text-white px-8 py-4 rounded-full font-semibold text-sm text-center">Speak to our team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<section class="py-12 bg-white border-t border-outline-variant/40">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div data-reveal class="flex flex-wrap justify-center lg:justify-between items-center gap-8 text-secondary">
+      <div class="flex items-center gap-2 text-sm font-medium">
+        <span class="material-symbols-outlined text-primary" style="font-size:18px;">verified_user</span> Professional Indemnity Covered
+      </div>
+      <div class="w-px h-4 bg-outline-variant hidden lg:block"></div>
+      <div class="flex items-center gap-2 text-sm font-medium">
+        <span class="material-symbols-outlined text-primary" style="font-size:18px;">public</span> UK &amp; International Reach
+      </div>
+      <div class="w-px h-4 bg-outline-variant hidden lg:block"></div>
+      <div class="flex items-center gap-2 text-sm font-medium">
+        <span class="material-symbols-outlined text-primary" style="font-size:18px;">history</span> 15+ Years Experience
+      </div>
+      <div class="w-px h-4 bg-outline-variant hidden lg:block"></div>
+      <a href="contact.html" class="btn-primary bg-primary-container text-on-primary-container px-7 py-3 rounded-full font-semibold text-sm">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#1A1A2E;border-top:1px solid rgba(255,255,255,0.06);">
+  <div class="max-w-[1320px] mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <a href="index.html" class="block mb-4"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a>
+      <p class="text-white/40 text-sm leading-relaxed">Professional advisory for high-stakes business growth and compliance.</p>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Services</h5>
+      <div class="flex flex-col gap-3">
+        <a href="business-advisory.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Business Advisory</a>
+        <a href="hr-services.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">HR Services</a>
+        <a href="compliance.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Compliance &amp; Risk</a>
+      </div>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Company</h5>
+      <div class="flex flex-col gap-3">
+        <a href="about.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">About Us</a>
+        <a href="resources-coming-soon.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Resources</a>
+        <a href="contact.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Contact</h5>
+      <div class="flex flex-col gap-3">
+        <a href="mailto:info@essensiasolutions.com" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">info@essensiasolutions.com</a>
+        <a href="tel:03333390045" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">03333390045</a>
+        <span class="text-white/40 text-sm">60 Tottenham Court Road, Office 856, London, England, W1T 2EW</span>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top:1px solid rgba(255,255,255,0.06);">
+    <p class="text-white/30 text-sm">© 2025 Essensia Solutions. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Privacy Policy</a>
+      <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>

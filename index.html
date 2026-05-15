@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home | Essensia Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-error-container": "#93000a",
+          "surface-container-low": "#EAE4F5",
+          "surface-container-highest": "#CCBFE5",
+          "on-primary-fixed": "#1A1A2E",
+          "on-tertiary-fixed": "#1A1A2E",
+          "secondary-container": "#DDD5F0",
+          "on-secondary-fixed-variant": "#4A4470",
+          "on-error": "#ffffff",
+          "on-secondary-container": "#3D3060",
+          "surface-container-high": "#D8CEEC",
+          "on-secondary": "#ffffff",
+          "secondary-fixed-dim": "#B8ABDC",
+          "on-primary": "#ffffff",
+          "on-surface": "#1A1A2E",
+          "primary": "#5B2D8E",
+          "primary-fixed-dim": "#C4A8E8",
+          "on-surface-variant": "#3D3060",
+          "primary-fixed": "#EDE9F7",
+          "surface-container": "#E4DCF5",
+          "tertiary": "#0A90D4",
+          "primary-container": "#7B3FC4",
+          "error": "#ba1a1a",
+          "on-primary-fixed-variant": "#3D1F6B",
+          "on-background": "#1A1A2E",
+          "on-primary-container": "#FFFFFF",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#D4C8F0",
+          "surface": "#EDE9F7",
+          "surface-bright": "#F5F2FF",
+          "tertiary-fixed": "#E0F4FE",
+          "background": "#EDE9F7",
+          "secondary": "#4A4470",
+          "inverse-surface": "#1A1A2E",
+          "tertiary-container": "#1565C0",
+          "on-tertiary-fixed-variant": "#003569",
+          "outline": "#6B5E8A",
+          "on-secondary-fixed": "#1A1A2E",
+          "tertiary-fixed-dim": "#4FC3F7",
+          "outline-variant": "#C4B8DC",
+          "surface-variant": "#CCBFE5",
+          "inverse-primary": "#C4A8E8",
+          "surface-container-lowest": "#ffffff",
+          "error-container": "#ffdad6",
+          "secondary-fixed": "#DDD5F0",
+          "surface-tint": "#5B2D8E",
+          "inverse-on-surface": "#EDE9F7",
+          "on-tertiary-container": "#FFFFFF",
+          "ink": "#1A1A2E",
+          "ink-2": "#5C5580"
+        },
+        borderRadius: {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "2xl": "1rem",
+          "3xl": "1.5rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "xl": "80px",
+          "gutter": "24px",
+          "base": "8px",
+          "margin": "32px",
+          "xs": "4px",
+          "lg": "48px",
+          "md": "24px",
+          "sm": "12px"
+        },
+        fontFamily: {
+          "sans": ["Outfit", "system-ui", "sans-serif"],
+          "body-lg": ["Outfit", "sans-serif"],
+          "label-sm": ["Outfit", "sans-serif"],
+          "label-md": ["Outfit", "sans-serif"],
+          "body-md": ["Outfit", "sans-serif"],
+          "display-lg": ["Outfit", "sans-serif"],
+          "headline-md": ["Outfit", "sans-serif"],
+          "headline-lg": ["Outfit", "sans-serif"]
+        },
+        fontSize: {
+          "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+          "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+          "display-lg": ["52px", {"lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+          "headline-md": ["22px", {"lineHeight": "1.3", "fontWeight": "600"}],
+          "headline-lg": ["34px", {"lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root { --expo: cubic-bezier(0.16, 1, 0.3, 1); }
+
+  body { font-family: 'Outfit', system-ui, sans-serif; background-color: #EDE9F7; color: #1A1A2E; }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Scroll reveal */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s var(--expo), transform 0.75s var(--expo);
+  }
+  [data-reveal].in-view { opacity: 1; transform: translateY(0); }
+  [data-delay="1"] { transition-delay: 0.08s; }
+  [data-delay="2"] { transition-delay: 0.16s; }
+  [data-delay="3"] { transition-delay: 0.24s; }
+  [data-delay="4"] { transition-delay: 0.32s; }
+
+  /* Nav link underline */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0; right: 0;
+    height: 1.5px;
+    background: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s var(--expo);
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .nav-link.active::after { transform: scaleX(1); }
+
+  /* Bento cards */
+  .bento-card {
+    transition: transform 0.45s var(--expo), box-shadow 0.45s var(--expo);
+    will-change: transform;
+  }
+  .bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -16px rgba(91, 45, 142, 0.14);
+  }
+
+  /* Tactile button feedback */
+  .btn-primary { transition: transform 0.15s var(--expo), opacity 0.2s ease; }
+  .btn-primary:hover { opacity: 0.93; }
+  .btn-primary:active { transform: translateY(1px) scale(0.985); }
+  .btn-outline { transition: background 0.25s var(--expo), transform 0.15s var(--expo); }
+  .btn-outline:hover { background: rgba(75, 110, 175, 0.07); }
+  .btn-outline:active { transform: translateY(1px) scale(0.985); }
+
+  /* Step number */
+  .step-num {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #5B2D8E;
+    opacity: 0.18;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Benefit divider row */
+  .benefit-row {
+    transition: background 0.3s var(--expo), padding 0.3s var(--expo);
+    border-radius: 0.75rem;
+  }
+  .benefit-row:hover { background: rgba(255,255,255,0.9); padding-left: 1.25rem; padding-right: 1.25rem; }
+
+  /* Featured testimonial */
+  .testimonial-featured { background: #1A1A2E; }
+
+  /* Hero geometric accent */
+  .hero-accent {
+    position: absolute;
+    top: -60px; right: -40px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, #EDE9F7 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5B2D8E;
+    opacity: 0.7;
+  }
+
+  /* Smooth image hover */
+  .img-hover { transition: transform 0.6s var(--expo); overflow: hidden; }
+  .img-hover:hover img { transform: scale(1.03); }
+  img { transition: transform 0.6s var(--expo); }
+</style>
+</head>
+<body class="font-sans text-on-background">
+
+<!-- Navigation -->
+<header class="bg-white/96 backdrop-blur-sm sticky top-0 z-50 border-b border-outline-variant/60" style="transition: box-shadow 0.3s ease;">
+  <div style="background:rgba(91,45,142,0.06); border-bottom:1px solid rgba(91,45,142,0.08);">
+    <div class="max-w-[1320px] mx-auto px-6 py-1.5 flex justify-end">
+      <p class="text-xs font-medium" style="color:#5B2D8E;opacity:0.7;">Registered Company No. 15544886</p>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" class="nav-link active text-primary text-sm font-semibold">Home</a>
+      <a href="about.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">About</a>
+      <div class="relative group">
+        <button class="nav-link text-secondary hover:text-on-surface text-sm font-semibold flex items-center gap-1 transition-colors duration-200">
+          Services
+          <span class="material-symbols-outlined" style="font-size:15px; transition: transform 0.25s ease;" class="group-hover:rotate-180">expand_more</span>
+        </button>
+        <div class="absolute top-full left-0 mt-3 w-52 bg-white border border-outline-variant rounded-2xl shadow-xl py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible" style="transition: opacity 0.2s ease, transform 0.2s ease; transform: translateY(4px);" onmouseenter="this.style.transform='translateY(0)'">
+          <a href="business-advisory.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">Business Advisory</a>
+          <a href="hr-services.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">HR Services</a>
+          <a href="compliance.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">Compliance &amp; Risk</a>
+        </div>
+      </div>
+      <a href="resources-coming-soon.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Resources</a>
+      <a href="contact.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn-primary hidden md:inline-block bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-semibold">Get Started</a>
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-secondary hover:text-on-surface transition-colors">
+        <span id="mob-open" class="material-symbols-outlined">menu</span>
+        <span id="mob-close" class="material-symbols-outlined hidden">close</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/50 px-6 py-6 space-y-1">
+    <a href="index.html" class="block py-3 text-sm font-semibold text-on-surface border-b border-outline-variant/30">Home</a>
+    <a href="about.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">About</a>
+    <div class="border-b border-outline-variant/30">
+      <p class="py-3 text-sm font-semibold text-secondary">Services</p>
+      <div class="pl-4 pb-3 space-y-2">
+        <a href="business-advisory.html" class="block text-sm text-secondary/70 hover:text-primary py-1">Business Advisory</a>
+        <a href="hr-services.html" class="block text-sm text-secondary/70 hover:text-primary py-1">HR Services</a>
+        <a href="compliance.html" class="block text-sm text-secondary/70 hover:text-primary py-1">Compliance &amp; Risk</a>
+      </div>
+    </div>
+    <a href="resources-coming-soon.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">Resources</a>
+    <a href="contact.html" class="block py-3 text-sm font-semibold text-secondary">Contact</a>
+    <a href="contact.html" class="block bg-primary-container text-on-primary-container text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Get Started</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ─── HERO ───────────────────────────────────────────────────────── -->
+<section class="relative overflow-hidden bg-surface" style="min-height: 100dvh; display: flex; align-items: center;">
+  <div class="max-w-[1320px] mx-auto px-6 w-full py-24 grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-16 items-center">
+
+    <!-- Left: Copy -->
+    <div class="relative z-10 max-w-2xl">
+      <span data-reveal class="section-label inline-block mb-6">HR &amp; Business Advisory</span>
+      <h1 data-reveal data-delay="1" class="font-sans font-bold text-on-surface mb-6"
+          style="font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.06; letter-spacing: -0.035em;">
+        Build a business<br/>designed to scale,<br/>
+        <span class="text-primary">not one you're<br/>constantly fixing</span>
+      </h1>
+      <p data-reveal data-delay="2" class="text-secondary mb-10 max-w-[52ch]"
+         style="font-size: 17px; line-height: 1.65; font-weight: 400;">
+        We support growing businesses with HR, compliance, and operational clarity, putting the right foundations in place so you can scale without firefighting.
+      </p>
+      <div data-reveal data-delay="3" class="flex flex-wrap gap-3">
+        <a href="contact.html" class="btn-primary bg-primary-container text-on-primary-container px-7 py-3.5 rounded-full font-semibold text-sm">
+          Book a Consultation
+        </a>
+        <a href="business-advisory.html" class="btn-outline border border-primary-container/60 text-primary px-7 py-3.5 rounded-full font-semibold text-sm">
+          Explore Services
+        </a>
+      </div>
+      <!-- Social proof strip -->
+      <div data-reveal data-delay="4" class="mt-12 flex items-center gap-6 pt-8 border-t border-outline-variant/40">
+        <div>
+          <p class="text-2xl font-bold text-on-surface" style="letter-spacing:-0.03em;">15+</p>
+          <p class="text-xs text-secondary font-medium mt-0.5">Years experience</p>
+        </div>
+        <div class="w-px h-8 bg-outline-variant"></div>
+        <div>
+          <p class="text-2xl font-bold text-on-surface" style="letter-spacing:-0.03em;">40+</p>
+          <p class="text-xs text-secondary font-medium mt-0.5">Businesses supported</p>
+        </div>
+        <div class="w-px h-8 bg-outline-variant"></div>
+        <div>
+          <p class="text-2xl font-bold text-on-surface" style="letter-spacing:-0.03em;">96%</p>
+          <p class="text-xs text-secondary font-medium mt-0.5">Client retention</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div data-reveal data-delay="2" class="relative hidden lg:block">
+      <div class="hero-accent"></div>
+      <div class="img-hover relative rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/40"
+           style="box-shadow: 0 32px 64px -20px rgba(91,45,142,0.18);">
+        <img
+          alt="Professional business advisory session in a contemporary boardroom"
+          class="w-full h-auto object-cover aspect-[4/5]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJQgywP5Cher3-lVFF7ktpt3QHOswWtClyBgIDOS25yrOOiDYLf_7lmRFvvu-y1eR3d7OlTndP_-YZcrU5Mlfisg5-H9YEoFm5ETdWGgNiYD-haVd5fNLFhkDXKaZeKq7McUx-KAaKA-eDN17CHmJZXsVnZ1RakPt6S8Ao8-wnHUDXDYTOKqVLv4f5rSdN7nqmJZ4wMr6IxX0dFqZaQMxynNYNTMkX6rQM6AiP64z3Szxhuy0VQKCiX4OmEU-joPUbe1quViKvzw"/>
+      </div>
+      <!-- Floating label -->
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl px-5 py-4 shadow-xl border border-outline-variant/40"
+           style="box-shadow: 0 8px 24px -8px rgba(91,45,142,0.12);">
+        <p class="text-xs text-secondary font-medium">London, United Kingdom</p>
+        <p class="text-sm font-bold text-on-surface mt-0.5" style="letter-spacing:-0.02em;">Trusted since 2004</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── WHAT WE DO ──────────────────────────────────────────────────── -->
+<section class="py-xl bg-white">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <span class="section-label">Services</span>
+      <h2 class="font-bold text-on-surface mt-3" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.025em; line-height: 1.1;">
+        What we do
+      </h2>
+    </div>
+
+    <!-- Asymmetric bento grid: left large (3fr) + right 2×2 (2fr) -->
+    <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-5">
+
+      <!-- Feature card: HR Support -->
+      <div data-reveal class="bento-card bg-primary rounded-3xl p-10 flex flex-col justify-between min-h-[400px] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+             style="background: radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.5), transparent 55%); pointer-events:none;"></div>
+        <div class="relative z-10">
+          <div class="w-10 h-10 rounded-2xl bg-white/15 flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-white" style="font-size:20px;">groups</span>
+          </div>
+          <h3 class="font-bold mb-4" style="font-size: clamp(1.5rem, 2.5vw, 2rem); letter-spacing: -0.025em;">HR Support</h3>
+          <p class="text-white/75 leading-relaxed max-w-md" style="font-size:15px;">
+            Comprehensive workforce management, from talent acquisition and employee relations to performance frameworks and policy documentation.
+          </p>
+        </div>
+        <a href="hr-services.html" class="relative z-10 inline-flex items-center gap-2 text-white/90 font-semibold text-sm hover:text-white transition-colors duration-200 mt-8">
+          Learn more <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Right 2×2 grid -->
+      <div class="grid grid-cols-2 gap-5">
+
+        <div data-reveal data-delay="1" class="bento-card bg-surface-container-low rounded-3xl p-7 flex flex-col justify-between border border-outline-variant/40">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">gavel</span>
+            </div>
+            <h3 class="font-bold text-on-surface mb-2" style="font-size:15px; letter-spacing:-0.01em;">Compliance</h3>
+            <p class="text-secondary" style="font-size:13px; line-height:1.55;">Staying ahead of regulatory changes before they become problems.</p>
+          </div>
+          <a href="compliance.html" class="inline-flex items-center gap-1 text-primary font-semibold text-xs mt-5 hover:gap-2 transition-all duration-200">
+            Learn more <span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span>
+          </a>
+        </div>
+
+        <div data-reveal data-delay="2" class="bento-card bg-white rounded-3xl p-7 flex flex-col justify-between border border-outline-variant/40">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">insights</span>
+            </div>
+            <h3 class="font-bold text-on-surface mb-2" style="font-size:15px; letter-spacing:-0.01em;">Business Advisory</h3>
+            <p class="text-secondary" style="font-size:13px; line-height:1.55;">Strategic guidance for founders navigating startup to scale-up.</p>
+          </div>
+          <a href="business-advisory.html" class="inline-flex items-center gap-1 text-primary font-semibold text-xs mt-5 hover:gap-2 transition-all duration-200">
+            Learn more <span class="material-symbols-outlined" style="font-size:13px;">arrow_forward</span>
+          </a>
+        </div>
+
+        <div data-reveal data-delay="3" class="bento-card bg-white rounded-3xl p-7 flex flex-col justify-between border border-outline-variant/40">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">person_search</span>
+            </div>
+            <h3 class="font-bold text-on-surface mb-2" style="font-size:15px; letter-spacing:-0.01em;">Recruitment</h3>
+            <p class="text-secondary" style="font-size:13px; line-height:1.55;">Finding talent that genuinely fits your culture, not just your job spec.</p>
+          </div>
+        </div>
+
+        <div data-reveal data-delay="4" class="bento-card bg-surface-container-low rounded-3xl p-7 flex flex-col justify-between border border-outline-variant/40">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-primary" style="font-size:17px;">model_training</span>
+            </div>
+            <h3 class="font-bold text-on-surface mb-2" style="font-size:15px; letter-spacing:-0.01em;">Training</h3>
+            <p class="text-secondary" style="font-size:13px; line-height:1.55;">Leadership workshops and operational upskilling for growing teams.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW WE WORK ─────────────────────────────────────────────────── -->
+<section class="py-xl" style="background: #f3f4f8;">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <span class="section-label">Our model</span>
+      <h2 class="font-bold text-on-surface mt-3" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.025em; line-height: 1.1;">
+        How we work
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+
+      <div data-reveal>
+        <span class="step-num">01</span>
+        <div class="w-8 h-0.5 bg-primary mb-5" style="opacity:0.35;"></div>
+        <h4 class="font-bold text-on-surface mb-3" style="font-size:16px; letter-spacing:-0.01em;">Retained HR</h4>
+        <p class="text-secondary" style="font-size:14px; line-height:1.6;">Consistent monthly support, peace of mind with ongoing expert oversight built into your operation.</p>
+      </div>
+
+      <div data-reveal data-delay="1">
+        <span class="step-num">02</span>
+        <div class="w-8 h-0.5 bg-primary mb-5" style="opacity:0.35;"></div>
+        <h4 class="font-bold text-on-surface mb-3" style="font-size:16px; letter-spacing:-0.01em;">Flexible Support</h4>
+        <p class="text-secondary" style="font-size:14px; line-height:1.6;">On-demand expertise for specific challenges, without long-term commitment or overhead.</p>
+      </div>
+
+      <div data-reveal data-delay="2">
+        <span class="step-num">03</span>
+        <div class="w-8 h-0.5 bg-primary mb-5" style="opacity:0.35;"></div>
+        <h4 class="font-bold text-on-surface mb-3" style="font-size:16px; letter-spacing:-0.01em;">Projects &amp; Reviews</h4>
+        <p class="text-secondary" style="font-size:14px; line-height:1.6;">Deep-dive audits and focused project delivery to resolve critical structural bottlenecks.</p>
+      </div>
+
+      <div data-reveal data-delay="3">
+        <span class="step-num">04</span>
+        <div class="w-8 h-0.5 bg-primary mb-5" style="opacity:0.35;"></div>
+        <h4 class="font-bold text-on-surface mb-3" style="font-size:16px; letter-spacing:-0.01em;">Advisory &amp; Structuring</h4>
+        <p class="text-secondary" style="font-size:14px; line-height:1.6;">High-level strategic restructuring that prepares your business for its next stage of growth.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── NARRATIVE ───────────────────────────────────────────────────── -->
+<section class="py-xl bg-white">
+  <div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+    <div data-reveal class="img-hover rounded-3xl overflow-hidden border border-outline-variant/40 shadow-xl"
+         style="box-shadow: 0 24px 48px -16px rgba(91,45,142,0.1);">
+      <img
+        alt="Structured operations workspace showing clarity and organised growth"
+        class="w-full h-auto object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRR-6FNpNymSZArQicSBW4LfhzMKPXoti_t6WC83u_Z-4SQDZqUOO42FsbGqRzmYrmpUJVVqRdPe-yHW19NATjQieRj16eIlL8_bZ1-yoRfzwRaofdKkAkY5GFLKSqQCQsCzYf5GTyb1bOLle6P1ZqdMPE0Hl2_UEHBXqxceriyuBCTlzmUK4ONNkunbwdKphNYc08yCWNBIxdrcaHJM7ssKmDjVy-NWnO0nW64U2gEvRdqV80dFstbwL5xImif6Iei56l98Sz2g"/>
+    </div>
+
+    <div data-reveal data-delay="1">
+      <span class="section-label">For growing businesses</span>
+      <h2 class="font-bold text-on-surface mt-3 mb-8" style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); letter-spacing: -0.025em; line-height: 1.1;">
+        The shift from hustle to structure is where most businesses stall
+      </h2>
+      <div class="space-y-5 text-secondary" style="font-size:16px; line-height:1.7;">
+        <p>In the early days, "informal" works. You know everyone's name, communication is organic, and processes live in your head. But as you grow, those informal systems crack under pressure.</p>
+        <p>Moving from a hustle mentality to a structured operation is the most critical hurdle for any founder. We bridge that gap, implementing the systems, documentation, and compliance frameworks that turn a loose team into a professional organisation.</p>
+      </div>
+      <p class="text-primary font-semibold mt-8" style="font-size:16px;">
+        Scale without losing the heart of what you built.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── WHY ESSENSIA ────────────────────────────────────────────────── -->
+<section class="py-xl" style="background: #EDE9F7;">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-16 items-start">
+
+      <div data-reveal>
+        <span class="section-label">Why us</span>
+        <h2 class="font-bold text-on-surface mt-3" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.025em; line-height: 1.1;">
+          What sets Essensia apart
+        </h2>
+        <p class="text-secondary mt-5" style="font-size:15px; line-height:1.65; max-width: 36ch;">
+          Essensia partners with startups and growing businesses to build structured operations, strengthen compliance, and create scalable foundations for long-term growth.
+        </p>
+      </div>
+
+      <div data-reveal data-delay="1" class="divide-y divide-outline-variant/50">
+
+        <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+          <span class="text-primary font-bold text-sm mt-0.5" style="min-width:28px; opacity:0.5;">01</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2" style="font-size:17px; letter-spacing:-0.015em;">Authoritative Expertise</h4>
+            <p class="text-secondary" style="font-size:14px; line-height:1.6;">Over a decade of experience in high-stakes HR and business management across sectors.</p>
+          </div>
+        </div>
+
+        <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+          <span class="text-primary font-bold text-sm mt-0.5" style="min-width:28px; opacity:0.5;">02</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2" style="font-size:17px; letter-spacing:-0.015em;">Compliance First</h4>
+            <p class="text-secondary" style="font-size:14px; line-height:1.6;">We don't just advise - we insulate your business from legal and operational risk before it surfaces.</p>
+          </div>
+        </div>
+
+        <div class="benefit-row py-7 px-4 -mx-4 flex gap-6 items-start">
+          <span class="text-primary font-bold text-sm mt-0.5" style="min-width:28px; opacity:0.5;">03</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2" style="font-size:17px; letter-spacing:-0.015em;">Strategic Partnership</h4>
+            <p class="text-secondary" style="font-size:14px; line-height:1.6;">We act as an extension of your leadership team, embedded, accountable, and invested in outcomes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ────────────────────────────────────────────────── -->
+<section class="py-xl bg-white">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="mb-14" data-reveal>
+      <span class="section-label">Client results</span>
+      <h2 class="font-bold text-on-surface mt-3" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.025em; line-height: 1.1;">
+        In their words
+      </h2>
+    </div>
+
+    <!-- Equal-size testimonial grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+      <div data-reveal class="bento-card bg-surface-container-low rounded-3xl p-8 flex flex-col justify-between border border-outline-variant/40">
+        <div>
+          <div class="flex gap-0.5 mb-5">
+            <span class="text-yellow-400" style="font-size:18px;">★★★★★</span>
+          </div>
+          <blockquote>
+            <p class="text-on-surface leading-relaxed" style="font-size:15px; line-height:1.65;">
+              The business templates from Essensia Solutions have been a game-changer for my small business. Great quality and highly recommended!
+            </p>
+          </blockquote>
+        </div>
+        <div class="flex items-center gap-3 mt-8">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-primary bg-primary-fixed flex-shrink-0">A</div>
+          <div>
+            <p class="font-semibold text-on-surface text-sm">Amina</p>
+            <p class="text-secondary text-xs mt-0.5">Birmingham</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal data-delay="1" class="bento-card bg-surface-container-low rounded-3xl p-8 flex flex-col justify-between border border-outline-variant/40">
+        <div>
+          <div class="flex gap-0.5 mb-5">
+            <span class="text-yellow-400" style="font-size:18px;">★★★★★</span>
+          </div>
+          <blockquote>
+            <p class="text-on-surface leading-relaxed" style="font-size:15px; line-height:1.65;">
+              Essensia Solutions provided excellent HR management services for my startup. Highly recommend!
+            </p>
+          </blockquote>
+        </div>
+        <div class="flex items-center gap-3 mt-8">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-primary bg-primary-fixed flex-shrink-0">J</div>
+          <div>
+            <p class="font-semibold text-on-surface text-sm">Joe</p>
+            <p class="text-secondary text-xs mt-0.5">London</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─────────────────────────────────────────────────────────── -->
+<section class="py-xl" style="background: #1A1A2E;">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-end">
+      <div data-reveal>
+        <span class="section-label" style="color: rgba(173,199,255,0.6);">Take the first step</span>
+        <h2 class="font-bold text-white mt-3 mb-5" style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.03em; line-height: 1.08;">
+          Get clear on what your business actually needs
+        </h2>
+        <p class="text-white/50" style="font-size:16px; line-height:1.65; max-width:46ch;">
+          Stop guessing and start building on a solid foundation. Let's discuss your specific challenges today.
+        </p>
+      </div>
+      <div data-reveal data-delay="1" class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 lg:justify-end lg:items-end">
+        <a href="contact.html" class="btn-primary inline-block bg-white text-on-surface px-8 py-4 rounded-full font-semibold text-sm text-center"
+           style="transition: opacity 0.2s ease, transform 0.15s ease;">
+          Book a Consultation
+        </a>
+        <a href="about.html" class="inline-block border border-white/20 text-white/70 hover:text-white px-8 py-4 rounded-full font-semibold text-sm text-center"
+           style="transition: border-color 0.25s ease, color 0.25s ease;">
+          Learn about us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─── FOOTER ──────────────────────────────────────────────────────── -->
+<footer style="background: #1A1A2E; border-top: 1px solid rgba(255,255,255,0.06);">
+  <div class="max-w-[1320px] mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <a href="index.html" class="block mb-4"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a>
+      <p class="text-white/40 text-sm leading-relaxed">Professional advisory for high-stakes business growth and compliance.</p>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Services</h5>
+      <div class="flex flex-col gap-3">
+        <a href="business-advisory.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Business Advisory</a>
+        <a href="hr-services.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">HR Services</a>
+        <a href="compliance.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Compliance &amp; Risk</a>
+      </div>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Company</h5>
+      <div class="flex flex-col gap-3">
+        <a href="about.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">About Us</a>
+        <a href="resources-coming-soon.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Resources</a>
+        <a href="contact.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Contact</h5>
+      <div class="flex flex-col gap-3">
+        <a href="mailto:info@essensiasolutions.com" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">info@essensiasolutions.com</a>
+        <a href="tel:03333390045" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">03333390045</a>
+        <span class="text-white/40 text-sm">60 Tottenham Court Road, Office 856, London, England, W1T 2EW</span>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4"
+       style="border-top: 1px solid rgba(255,255,255,0.06);">
+    <p class="text-white/30 text-sm">© 2025 Essensia Solutions. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Privacy Policy</a>
+      <a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script>
+  // Scroll reveal via Intersection Observer
+  (function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Hero reveals immediately on load
+    document.querySelectorAll('.relative.z-10 [data-reveal], section:first-of-type [data-reveal]').forEach(function(el) {
+      setTimeout(function() { el.classList.add('in-view'); }, 50);
+    });
+  })();
+</script>
+</body>
+</html>

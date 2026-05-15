@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7f2924",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#dfe2ec",
+                        "on-secondary-fixed": "#181c22",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-bright": "#f9f9ff",
+                        "on-surface-variant": "#434750",
+                        "on-primary-container": "#f0f2ff",
+                        "on-secondary-container": "#61646c",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "outline": "#747781",
+                        "secondary-fixed-dim": "#c3c6cf",
+                        "tertiary-fixed": "#ffdad6",
+                        "surface-dim": "#cddbf5",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-primary-fixed-variant": "#1e4584",
+                        "surface-container": "#e7eeff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary": "#5b5e66",
+                        "inverse-surface": "#233145",
+                        "inverse-primary": "#adc7ff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001a41",
+                        "secondary-fixed": "#dfe2ec",
+                        "background": "#f9f9ff",
+                        "on-surface": "#0e1c2f",
+                        "surface-container-highest": "#d5e3fe",
+                        "outline-variant": "#c3c6d2",
+                        "on-secondary-fixed-variant": "#43474e",
+                        "primary": "#315595",
+                        "surface-container-high": "#dee9ff",
+                        "primary-container": "#4b6eaf",
+                        "surface-tint": "#3a5d9d",
+                        "surface": "#f9f9ff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#d5e3fe",
+                        "tertiary": "#943832",
+                        "on-background": "#0e1c2f",
+                        "tertiary-container": "#b34f48",
+                        "on-tertiary-container": "#ffefed",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#410003",
+                        "tertiary-fixed-dim": "#ffb4ac"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin": "32px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-white/95 sticky top-0 z-50 border-b border-blue-100 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold tracking-tighter text-blue-800">Essensia Solutions</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Home</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">About</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Services</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Resources</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 font-label-md rounded transition-all hover:opacity-90">Get Started</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-xl">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-md">Get the right support for your business</h1>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                Connect with our team of executive advisors to streamline your operations, ensure compliance, and scale your HR strategy with precision.
+            </p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Book a Consultation: Large CTA Card -->
+<div class="md:col-span-8 bg-primary-container rounded-xl p-lg relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+<div class="relative z-10">
+<span class="inline-block bg-white/20 text-white font-label-sm px-3 py-1 rounded-full mb-md">Executive Strategy</span>
+<h2 class="font-headline-lg text-display-lg text-white mb-md">Book a Consultation</h2>
+<p class="text-on-primary-container/90 text-body-lg max-w-xl mb-lg">
+                        Schedule a structured session with our lead advisors to diagnose operational gaps and design a tailored roadmap for your firm's growth.
+                    </p>
+<button class="bg-white text-primary font-label-md px-8 py-4 rounded-lg flex items-center gap-base hover:shadow-lg transition-all group">
+                        Secure Your Session
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="absolute right-0 bottom-0 opacity-20 hidden lg:block">
+<span class="material-symbols-outlined text-[320px] leading-none" style="font-variation-settings: 'wght' 200;">calendar_month</span>
+</div>
+</div>
+<!-- Contact Details Card -->
+<div class="md:col-span-4 bg-white border border-outline-variant rounded-xl p-lg flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-lg">Contact Details</h3>
+<div class="space-y-lg">
+<div class="flex items-start gap-md">
+<div class="bg-surface-container p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-secondary uppercase tracking-wider mb-xs">Email Us</p>
+<a class="font-headline-md text-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:info@essensiasolutions.com">info@essensiasolutions.com</a>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-surface-container p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm text-secondary uppercase tracking-wider mb-xs">Call Us</p>
+<a class="font-headline-md text-body-lg text-on-surface hover:text-primary transition-colors" href="tel:+447517403635">+44 7517 403635</a>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-surface-container p-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-secondary uppercase tracking-wider mb-xs">Headquarters</p>
+<p class="font-headline-md text-body-lg text-on-surface">London, United Kingdom</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Send an Enquiry: Contact Form Section -->
+<div class="md:col-span-12 bg-surface-container-low rounded-xl p-lg grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Send an Enquiry</h2>
+<p class="text-body-md text-secondary max-w-md mb-lg">
+                        Have a specific question? Fill out the form and our advisory team will respond within one business day with a customized overview.
+                    </p>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-sm">HR Strategy</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-sm">Compliance</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-sm">Advisory</span>
+</div>
+</div>
+<form class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant">Full Name</label>
+<input class="w-full p-md bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded transition-all outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant">Email Address</label>
+<input class="w-full p-md bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded transition-all outline-none" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant">Message</label>
+<textarea class="w-full p-md bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded transition-all outline-none resize-none" placeholder="How can we help your business?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-label-md py-4 rounded-lg hover:bg-surface-tint transition-colors flex justify-center items-center gap-base" type="submit">
+                        Submit Enquiry
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Trust Section / Map Placeholder -->
+<section class="mt-xl">
+<div class="rounded-xl overflow-hidden h-[300px] border border-outline-variant relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated, high-angle aerial view of London's financial district at dusk, showing the Thames River and modern skyscrapers illuminated by warm interior lights. The atmosphere is professional and authoritative, utilizing a cool blue evening palette that aligns with the corporate Essensia Solutions brand. The lighting is soft and ambient, emphasizing structural clarity and executive-level stability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPzpJ7wOsHempB46RnMIf0mxz_HNrN9xVNaDxiIybzCDO_wCzGdK9ARidriYy3rMQhwKNHB9pCb-ixONPYMCKvzB_RsRvYwh_dWgsVQ-fzCDBiFJJWxzuKrbUaOaV0urR8jJ712cE_IjmyhN9UZDM0cxQ3yS07QvCiEZmR5fdPuWjGwRRZ43Diucc6povNY2GN_nB7JnushzpU2eHfwu0e-c3jLUku97g0niicjNBRmfR41K97H30a1feNYuyuL6g3SFZ88cH0g"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute bottom-md left-md bg-white p-md rounded border border-outline-variant shadow-lg flex items-center gap-sm">
+<div class="bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">London HQ</p>
+<p class="font-label-sm text-secondary">Strategic Hub for Global Advisory</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-blue-100 mt-xl">
+<div class="max-w-[1280px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1">
+<div class="text-lg font-bold text-blue-800 mb-md">Essensia Solutions</div>
+<p class="font-manrope text-sm text-slate-500 max-w-xs">Elevating business performance through strategic advisory and executive support.</p>
+</div>
+<div>
+<h4 class="font-manrope font-semibold text-sm text-blue-700 mb-md">Services</h4>
+<div class="flex flex-col gap-sm">
+<a class="font-manrope text-sm text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity duration-150" href="#">HR Strategy</a>
+<a class="font-manrope text-sm text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity duration-150" href="#">Compliance</a>
+<a class="font-manrope text-sm text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity duration-150" href="#">Advisory</a>
+</div>
+</div>
+<div>
+<h4 class="font-manrope font-semibold text-sm text-blue-700 mb-md">Company</h4>
+<div class="flex flex-col gap-sm">
+<a class="font-manrope text-sm text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity duration-150" href="#">Privacy Policy</a>
+<a class="font-manrope text-sm text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline transition-opacity duration-150" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h4 class="font-manrope font-semibold text-sm text-blue-700 mb-md">Connect</h4>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-700 cursor-pointer">share</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-700 cursor-pointer">public</span>
+</div>
+</div>
+<p class="font-manrope text-sm text-slate-500 mt-md">© 2024 Essensia Solutions. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-highest": "#d5e3fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-tertiary-fixed": "#410003",
+                    "secondary-container": "#dfe2ec",
+                    "on-secondary-fixed-variant": "#43474e",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#61646c",
+                    "surface-container-high": "#dee9ff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#c3c6cf",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#0e1c2f",
+                    "primary": "#315595",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-surface-variant": "#434750",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-container": "#e7eeff",
+                    "tertiary": "#943832",
+                    "primary-container": "#4b6eaf",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#1e4584",
+                    "on-background": "#0e1c2f",
+                    "on-primary-container": "#f0f2ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#cddbf5",
+                    "surface": "#f9f9ff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed": "#ffdad6",
+                    "background": "#f9f9ff",
+                    "secondary": "#5b5e66",
+                    "inverse-surface": "#233145",
+                    "tertiary-container": "#b34f48",
+                    "on-tertiary-fixed-variant": "#7f2924",
+                    "outline": "#747781",
+                    "on-secondary-fixed": "#181c22",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "outline-variant": "#c3c6d2",
+                    "surface-variant": "#d5e3fe",
+                    "inverse-primary": "#adc7ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dfe2ec",
+                    "surface-tint": "#3a5d9d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-tertiary-container": "#ffefed"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9ff;
+            color: #0e1c2f;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- Top Navigation Bar -->
+<header class="bg-white/95 dark:bg-slate-900/95 docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none border-b border-blue-100 dark:border-slate-800 transition-all duration-200 ease-in-out">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold tracking-tighter text-blue-800 dark:text-white font-display-lg">
+                Essensia Solutions
+            </div>
+<nav class="hidden md:flex items-center gap-base">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 font-manrope font-semibold text-sm tracking-tight px-4" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-manrope font-semibold text-sm tracking-tight px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-slate-800" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-manrope font-semibold text-sm tracking-tight px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-slate-800" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-manrope font-semibold text-sm tracking-tight px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-slate-800" href="#">Resources</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-manrope font-semibold text-sm tracking-tight px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-slate-800" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-label-md hover:opacity-90 transition-opacity">
+                Get Started
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-xl overflow-hidden bg-surface">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-primary font-label-sm rounded-full mb-6 uppercase tracking-wider">Business Excellence</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">
+                        Build a business that runs properly - <span class="text-primary">not one you’re constantly fixing!</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-lg max-w-xl">
+                        We support growing businesses with HR, compliance, and operational clarity, helping you put the right foundations in place so your business can run efficiently and scale with confidence.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-label-md shadow-lg shadow-primary-container/20 hover:translate-y-[-2px] transition-all">
+                            Book a Consultation
+                        </button>
+<button class="border-2 border-primary-container text-primary-container px-8 py-4 rounded-xl font-label-md hover:bg-primary-container/5 transition-all">
+                            Explore Our Services
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full bg-surface-container-highest absolute -top-12 -right-12 w-full h-full -z-10 opacity-50"></div>
+<img alt="Corporate Advisory Session" class="w-full h-auto rounded-xl shadow-2xl border border-outline-variant object-cover aspect-[4/3]" data-alt="A professional business advisory session where a diverse team of executives is collaborating in a bright, contemporary glass-walled boardroom. The lighting is crisp and natural, highlighting a clean corporate aesthetic with soft blue and white accents throughout the room. The atmosphere is one of focused productivity and structured growth, reflecting a high-end light mode design system with sophisticated professional energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJQgywP5Cher3-lVFF7ktpt3QHOswWtClyBgIDOS25yrOOiDYLf_7lmRFvvu-y1eR3d7OlTndP_-YZcrU5Mlfisg5-H9YEoFm5ETdWGgNiYD-haVd5fNLFhkDXKaZeKq7McUx-KAaKA-eDN17CHmJZXsVnZ1RakPt6S8Ao8-wnHUDXDYTOKqVLv4f5rSdN7nqmJZ4wMr6IxX0dFqZaQMxynNYNTMkX6rQM6AiP64z3Szxhuy0VQKCiX4OmEU-joPUbe1quViKvzw"/>
+</div>
+</div>
+</section>
+<!-- WHAT WE DO - Bento Grid -->
+<section class="py-xl bg-white">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm text-on-surface">WHAT WE DO</h2>
+<div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Large Card -->
+<div class="md:col-span-2 p-lg bg-surface-container-low border border-outline-variant rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-md">groups</span>
+<h3 class="font-headline-md text-headline-md mb-sm">HR Support</h3>
+<p class="font-body-md text-secondary max-w-md">Comprehensive workforce management, from talent acquisition strategies to employee relations and performance frameworks.</p>
+</div>
+<a class="mt-lg text-primary font-label-md flex items-center gap-xs" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Small Card -->
+<div class="p-md bg-white border border-outline-variant rounded-xl hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">gavel</span>
+<h3 class="font-headline-md text-headline-md mb-sm text-lg">Compliance</h3>
+<p class="font-body-md text-secondary text-sm">Ensuring your business stays ahead of regulatory changes and legal requirements effortlessly.</p>
+</div>
+<!-- Small Card -->
+<div class="p-md bg-white border border-outline-variant rounded-xl hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">insights</span>
+<h3 class="font-headline-md text-headline-md mb-sm text-lg">Business Advisory</h3>
+<p class="font-body-md text-secondary text-sm">Strategic guidance for founders navigating the transition from startup to scale-up.</p>
+</div>
+<!-- Small Card -->
+<div class="p-md bg-white border border-outline-variant rounded-xl hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">person_search</span>
+<h3 class="font-headline-md text-headline-md mb-sm text-lg">Recruitment</h3>
+<p class="font-body-md text-secondary text-sm">Finding and vetting the right talent that aligns with your specific company culture.</p>
+</div>
+<!-- Small Card -->
+<div class="p-md bg-white border border-outline-variant rounded-xl hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">model_training</span>
+<h3 class="font-headline-md text-headline-md mb-sm text-lg">Training</h3>
+<p class="font-body-md text-secondary text-sm">Upskilling your internal teams with leadership workshops and operational training.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW WE WORK - Process Steppers -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-6">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">HOW WE WORK</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<!-- Connection Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-outline-variant z-0"></div>
+<div class="relative z-10 text-center">
+<div class="w-24 h-24 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-md border-8 border-surface-container-low">
+<span class="material-symbols-outlined text-4xl">contract</span>
+</div>
+<h4 class="font-headline-md text-lg mb-sm">Retained HR</h4>
+<p class="font-body-md text-secondary text-sm px-4">Consistent, monthly support providing peace of mind and ongoing expert oversight.</p>
+</div>
+<div class="relative z-10 text-center">
+<div class="w-24 h-24 bg-white border-4 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-4xl">support_agent</span>
+</div>
+<h4 class="font-headline-md text-lg mb-sm">Flexible Support</h4>
+<p class="font-body-md text-secondary text-sm px-4">On-demand expertise for when you need a helping hand without long-term commitment.</p>
+</div>
+<div class="relative z-10 text-center">
+<div class="w-24 h-24 bg-white border-4 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-4xl">assignment</span>
+</div>
+<h4 class="font-headline-md text-lg mb-sm">Projects &amp; Reviews</h4>
+<p class="font-body-md text-secondary text-sm px-4">Deep-dive audits and specific project delivery to solve critical bottlenecks.</p>
+</div>
+<div class="relative z-10 text-center">
+<div class="w-24 h-24 bg-white border-4 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+</div>
+<h4 class="font-headline-md text-lg mb-sm">Advisory &amp; Structuring</h4>
+<p class="font-body-md text-secondary text-sm px-4">High-level strategic restructuring to prepare your business for the next leap.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FOR GROWING BUSINESSES - Narrative Section -->
+<section class="py-xl bg-white border-y border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="order-2 md:order-1">
+<img alt="Structured Operations" class="rounded-xl border border-outline-variant shadow-xl" data-alt="A clean, minimalist workspace showing a laptop with data charts and a notebook with structured organizational diagrams. The lighting is soft and professional, capturing a mood of clarity and order. The image uses a palette of muted blues, whites, and light greys to convey a sense of transition from chaotic startup growth to established corporate structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRR-6FNpNymSZArQicSBW4LfhzMKPXoti_t6WC83u_Z-4SQDZqUOO42FsbGqRzmYrmpUJVVqRdPe-yHW19NATjQieRj16eIlL8_bZ1-yoRfzwRaofdKkAkY5GFLKSqQCQsCzYf5GTyb1bOLle6P1ZqdMPE0Hl2_UEHBXqxceriyuBCTlzmUK4ONNkunbwdKphNYc08yCWNBIxdrcaHJM7ssKmDjVy-NWnO0nW64U2gEvRdqV80dFstbwL5xImif6Iei56l98Sz2g"/>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-md">FOR GROWING BUSINESSES</h2>
+<div class="space-y-md font-body-lg text-secondary">
+<p>In the early days, "informal" works. You know everyone's name, communication is organic, and processes live in your head. But as you grow, those informal systems start to crack under pressure.</p>
+<p>Moving from a "hustle" mentality to a structured operation is the most critical hurdle for any founder. We bridge that gap by implementing the systems, documentation, and compliance frameworks that turn a loose team into a professional organization.</p>
+<p class="text-primary font-semibold">Scale without losing the heart of your business, but with the discipline of an enterprise.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY ESSENSIA - List of Benefits -->
+<section class="py-xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-lg">WHY ESSENSIA</h2>
+<div class="space-y-md">
+<div class="flex gap-md p-md bg-white border border-outline-variant rounded-lg hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-headline-md text-lg">Authoritative Expertise</h4>
+<p class="font-body-md text-secondary">Over two decades of experience in high-stakes HR and business management.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-white border border-outline-variant rounded-lg hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<h4 class="font-headline-md text-lg">Compliance First</h4>
+<p class="font-body-md text-secondary">We don't just advise; we insulate your business from legal and operational risk.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-white border border-outline-variant rounded-lg hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">partner_exchange</span>
+<div>
+<h4 class="font-headline-md text-lg">Strategic Partnership</h4>
+<p class="font-body-md text-secondary">We act as an extension of your leadership team, not just an external vendor.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL PROOF - Testimonials -->
+<section class="py-xl bg-white">
+<div class="max-w-[1280px] mx-auto px-6">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">SOCIAL PROOF</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant italic">
+<p class="font-body-md text-on-surface mb-lg">"Essensia transformed our approach to HR. We went from reactive firefighting to a proactive culture where everyone knows their role and the rules."</p>
+<div class="flex items-center gap-sm non-italic">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="font-label-md">James Davidson</p>
+<p class="text-xs text-secondary">CEO, TechForward</p>
+</div>
+</div>
+</div>
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant italic">
+<p class="font-body-md text-on-surface mb-lg">"The level of clarity and professional stability we've gained since partnering with Essensia is invaluable. They truly understand the pressures of scaling."</p>
+<div class="flex items-center gap-sm non-italic">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">SM</div>
+<div>
+<p class="font-label-md">Sarah Miller</p>
+<p class="text-xs text-secondary">Founder, GreenRetail</p>
+</div>
+</div>
+</div>
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant italic">
+<p class="font-body-md text-on-surface mb-lg">"Their compliance audit saved us from several potential pitfalls we hadn't even considered. Professional, thorough, and highly recommended."</p>
+<div class="flex items-center gap-sm non-italic">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">RT</div>
+<div>
+<p class="font-label-md">Robert Thorne</p>
+<p class="text-xs text-secondary">Director, Thorne Advisory</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl bg-primary text-white text-center">
+<div class="max-w-[1280px] mx-auto px-6">
+<h2 class="font-display-lg text-headline-lg mb-md">Get clear on what your business needs.</h2>
+<p class="font-body-lg mb-lg opacity-90 max-w-xl mx-auto">Stop guessing and start building on a solid foundation. Let's discuss your specific challenges today.</p>
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-label-md hover:bg-opacity-95 transition-all">
+                    Book a Consultation
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 full-width border-t border-blue-100 dark:border-slate-800 transition-opacity duration-150">
+<div class="max-w-[1280px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-blue-800 dark:text-white mb-4">Essensia Solutions</div>
+<p class="font-manrope text-sm text-slate-500 dark:text-slate-400">Professional advisory for high-stakes business growth.</p>
+</div>
+<div>
+<h5 class="text-on-surface font-label-md mb-4">Services</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">HR Strategy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Compliance</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Advisory</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-label-md mb-4">Company</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">About Us</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Resources</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-label-md mb-4">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline font-manrope text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 py-6 border-t border-blue-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-manrope text-sm text-slate-500 dark:text-slate-400">© 2024 Essensia Solutions. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</footer>
+</body></html>

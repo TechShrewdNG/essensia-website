@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Essensia Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: { "surface-container-low":"#EAE4F5","surface-container-highest":"#CCBFE5","secondary-container":"#DDD5F0","on-secondary-container":"#3D3060","surface-container-high":"#D8CEEC","on-primary":"#ffffff","on-surface":"#1A1A2E","primary":"#5B2D8E","primary-fixed-dim":"#C4A8E8","primary-fixed":"#EDE9F7","surface-container":"#E4DCF5","primary-container":"#7B3FC4","on-background":"#1A1A2E","on-primary-container":"#FFFFFF","surface":"#EDE9F7","background":"#EDE9F7","secondary":"#4A4470","inverse-surface":"#1A1A2E","outline":"#6B5E8A","outline-variant":"#C4B8DC","surface-variant":"#CCBFE5","inverse-primary":"#C4A8E8","surface-container-lowest":"#ffffff","on-surface-variant":"#3D3060" },
+        borderRadius: { "DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","2xl":"1rem","3xl":"1.5rem","full":"9999px" },
+        spacing: { "xl":"80px","gutter":"24px","base":"8px","margin":"32px","xs":"4px","lg":"48px","md":"24px","sm":"12px" },
+        fontFamily: { "sans":["Outfit","system-ui","sans-serif"],"body-lg":["Outfit"],"label-sm":["Outfit"],"label-md":["Outfit"],"body-md":["Outfit"],"display-lg":["Outfit"],"headline-md":["Outfit"],"headline-lg":["Outfit"] },
+        fontSize: { "body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"1.2","fontWeight":"500"}],"label-md":["14px",{"lineHeight":"1.2","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}],"display-lg":["52px",{"lineHeight":"1.05","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"1.3","fontWeight":"600"}],"headline-lg":["34px",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}] }
+      }
+    }
+  }
+</script>
+<style>
+  :root { --expo: cubic-bezier(0.16, 1, 0.3, 1); }
+  body { font-family: 'Outfit', system-ui, sans-serif; background-color: #EDE9F7; color: #1A1A2E; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 0.75s var(--expo), transform 0.75s var(--expo); }
+  [data-reveal].in-view { opacity: 1; transform: translateY(0); }
+  [data-delay="1"] { transition-delay: 0.08s; } [data-delay="2"] { transition-delay: 0.16s; } [data-delay="3"] { transition-delay: 0.24s; }
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; bottom:-3px; left:0; right:0; height:1.5px; background:currentColor; transform-origin:left; transform:scaleX(0); transition:transform 0.3s var(--expo); }
+  .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+  .bento-card { transition: transform 0.45s var(--expo), box-shadow 0.45s var(--expo); will-change: transform; }
+  .bento-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -16px rgba(91,45,142,0.14); }
+  .btn-primary { transition: transform 0.15s var(--expo), opacity 0.2s ease; }
+  .btn-primary:hover { opacity: 0.93; } .btn-primary:active { transform: translateY(1px) scale(0.985); }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5B2D8E; opacity:0.7; }
+  .form-input { width: 100%; padding: 14px 16px; background: white; border: 1.5px solid #c3c6d2; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 15px; color: #1A1A2E; outline: none; transition: border-color 0.25s var(--expo), box-shadow 0.25s var(--expo); }
+  .form-input:focus { border-color: #5B2D8E; box-shadow: 0 0 0 3px rgba(91,45,142,0.1); }
+  .form-input::placeholder { color: #a0a5b0; }
+  .form-label { display: block; font-size: 13px; font-weight: 600; color: #434750; margin-bottom: 6px; letter-spacing: 0.01em; }
+</style>
+</head>
+<body class="font-sans text-on-background">
+
+<header class="bg-white/96 backdrop-blur-sm sticky top-0 z-50 border-b border-outline-variant/60">
+  <div style="background:rgba(91,45,142,0.06); border-bottom:1px solid rgba(91,45,142,0.08);">
+    <div class="max-w-[1320px] mx-auto px-6 py-1.5 flex justify-end">
+      <p class="text-xs font-medium" style="color:#5B2D8E;opacity:0.7;">Registered Company No. 15544886</p>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Home</a>
+      <a href="about.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">About</a>
+      <div class="relative group">
+        <button class="nav-link text-secondary hover:text-on-surface text-sm font-semibold flex items-center gap-1 transition-colors duration-200">Services <span class="material-symbols-outlined" style="font-size:15px;">expand_more</span></button>
+        <div class="absolute top-full left-0 mt-3 w-52 bg-white border border-outline-variant rounded-2xl shadow-xl py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible" style="transition:opacity 0.2s ease;">
+          <a href="business-advisory.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">Business Advisory</a>
+          <a href="hr-services.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">HR Services</a>
+          <a href="compliance.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-secondary hover:text-primary hover:bg-surface-container-low rounded-xl mx-1 transition-colors duration-150">Compliance &amp; Risk</a>
+        </div>
+      </div>
+      <a href="resources-coming-soon.html" class="nav-link text-secondary hover:text-on-surface text-sm font-semibold transition-colors duration-200">Resources</a>
+      <a href="contact.html" class="nav-link active text-primary text-sm font-semibold">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn-primary hidden md:inline-block bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-semibold">Get Started</a>
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-secondary hover:text-on-surface transition-colors">
+        <span id="mob-open" class="material-symbols-outlined">menu</span>
+        <span id="mob-close" class="material-symbols-outlined hidden">close</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/50 px-6 py-6 space-y-1">
+    <a href="index.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">Home</a>
+    <a href="about.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">About</a>
+    <div class="border-b border-outline-variant/30">
+      <p class="py-3 text-sm font-semibold text-secondary">Services</p>
+      <div class="pl-4 pb-3 space-y-2">
+        <a href="business-advisory.html" class="block text-sm text-secondary/70 hover:text-primary py-1">Business Advisory</a>
+        <a href="hr-services.html" class="block text-sm text-secondary/70 hover:text-primary py-1">HR Services</a>
+        <a href="compliance.html" class="block text-sm text-secondary/70 hover:text-primary py-1">Compliance &amp; Risk</a>
+      </div>
+    </div>
+    <a href="resources-coming-soon.html" class="block py-3 text-sm font-semibold text-secondary border-b border-outline-variant/30">Resources</a>
+    <a href="contact.html" class="block py-3 text-sm font-semibold text-on-surface">Contact</a>
+    <a href="contact.html" class="block bg-primary-container text-on-primary-container text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Get Started</a>
+  </div>
+</header>
+
+<main class="max-w-[1320px] mx-auto px-6 py-16">
+
+  <!-- Hero -->
+  <div class="mb-16 max-w-2xl">
+    <span data-reveal class="section-label">Get in touch</span>
+    <h1 data-reveal data-delay="1" class="font-bold text-on-surface mt-3" style="font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.06;letter-spacing:-0.035em;">
+      Get the right support for your business
+    </h1>
+    <p data-reveal data-delay="2" class="text-secondary mt-5" style="font-size:17px;line-height:1.65;max-width:50ch;">
+      Connect with our advisory team to discuss HR, compliance, and business strategy tailored to your stage of growth.
+    </p>
+  </div>
+
+  <!-- Bento Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-5 mb-5">
+
+    <!-- Book Consultation (large dark card) -->
+    <div data-reveal class="bento-card rounded-3xl p-10 lg:p-12 relative overflow-hidden flex flex-col justify-between min-h-[420px]" style="background:linear-gradient(135deg,#5B2D8E 0%,#1A1A2E 100%);">
+      <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+        <span class="material-symbols-outlined text-white" style="font-size:280px;font-variation-settings:'wght' 200;line-height:1;">calendar_month</span>
+      </div>
+      <div class="relative z-10">
+        <span class="inline-block bg-white/15 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">Executive Strategy</span>
+        <h2 class="font-bold text-white mb-4" style="font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-0.025em;line-height:1.1;">Book a Consultation</h2>
+        <p class="text-white/70 mb-8" style="font-size:15px;line-height:1.65;max-width:42ch;">Schedule a structured session with our lead advisors to diagnose operational gaps and design a tailored roadmap for your firm's growth.</p>
+      </div>
+      <div class="relative z-10">
+        <a href="mailto:info@essensiasolutions.com" class="btn-primary inline-flex items-center gap-2 bg-white text-on-surface px-7 py-4 rounded-full font-semibold text-sm">
+          Secure Your Session <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Details -->
+    <div data-reveal data-delay="1" class="bento-card bg-white rounded-3xl p-10 border border-outline-variant/40 flex flex-col justify-center">
+      <h3 class="font-bold text-on-surface mb-8" style="font-size:1.2rem;letter-spacing:-0.02em;">Contact Details</h3>
+      <div class="space-y-8">
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-primary" style="font-size:18px;">mail</span>
+          </div>
+          <div>
+            <p class="text-secondary text-xs font-semibold uppercase tracking-widest mb-1.5">Email Us</p>
+            <a href="mailto:info@essensiasolutions.com" class="font-semibold text-on-surface hover:text-primary transition-colors duration-200" style="font-size:15px;">info@essensiasolutions.com</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-primary" style="font-size:18px;">call</span>
+          </div>
+          <div>
+            <p class="text-secondary text-xs font-semibold uppercase tracking-widest mb-1.5">Call Us</p>
+            <a href="tel:03333390045" class="font-semibold text-on-surface hover:text-primary transition-colors duration-200" style="font-size:15px;">03333390045</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-primary" style="font-size:18px;">location_on</span>
+          </div>
+          <div>
+            <p class="text-secondary text-xs font-semibold uppercase tracking-widest mb-1.5">Headquarters</p>
+            <p class="font-semibold text-on-surface" style="font-size:15px;">60 Tottenham Court Road, Office 856, London, England, W1T 2EW</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Enquiry Form (full width) -->
+  <div data-reveal class="rounded-3xl bg-surface-container-low border border-outline-variant/40 p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <div>
+      <span class="section-label">Send an enquiry</span>
+      <h2 class="font-bold text-on-surface mt-3 mb-5" style="font-size:clamp(1.5rem,2.8vw,2rem);letter-spacing:-0.025em;line-height:1.1;">Have a specific question?</h2>
+      <p class="text-secondary mb-8" style="font-size:15px;line-height:1.65;max-width:38ch;">Our advisory team responds within one business day with a customised overview of how we can help.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-white border border-outline-variant/60 text-secondary px-4 py-1.5 rounded-full text-xs font-semibold">HR Strategy</span>
+        <span class="bg-white border border-outline-variant/60 text-secondary px-4 py-1.5 rounded-full text-xs font-semibold">Compliance</span>
+        <span class="bg-white border border-outline-variant/60 text-secondary px-4 py-1.5 rounded-full text-xs font-semibold">Business Advisory</span>
+        <span class="bg-white border border-outline-variant/60 text-secondary px-4 py-1.5 rounded-full text-xs font-semibold">Recruitment</span>
+      </div>
+    </div>
+
+    <form class="space-y-5" onsubmit="sendEnquiry(event);">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="form-label">Full Name</label>
+          <input id="enq-name" type="text" class="form-input" placeholder="Your full name"/>
+        </div>
+        <div>
+          <label class="form-label">Email Address</label>
+          <input id="enq-email" type="email" class="form-input" placeholder="your@company.com"/>
+        </div>
+      </div>
+      <div>
+        <label class="form-label">Company (optional)</label>
+        <input id="enq-company" type="text" class="form-input" placeholder="Your company name"/>
+      </div>
+      <div>
+        <label class="form-label">How can we help?</label>
+        <textarea id="enq-message" class="form-input resize-none" rows="4" placeholder="Tell us about your business challenges..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full bg-primary text-white py-4 rounded-2xl font-semibold text-sm flex justify-center items-center gap-2">
+        Submit Enquiry <span class="material-symbols-outlined" style="font-size:16px;">send</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Map -->
+  <div data-reveal class="mt-5 rounded-3xl overflow-hidden border border-outline-variant/40" style="height:280px;position:relative;">
+    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPzpJ7wOsHempB46RnMIf0mxz_HNrN9xVNaDxiIybzCDO_wCzGdK9ARidriYy3rMQhwKNHB9pCb-ixONPYMCKvzB_RsRvYwh_dWgsVQ-fzCDBiFJJWxzuKrbUaOaV0urR8jJ712cE_IjmyhN9UZDM0cxQ3yS07QvCiEZmR5fdPuWjGwRRZ43Diucc6povNY2GN_nB7JnushzpU2eHfwu0e-c3jLUku97g0niicjNBRmfR41K97H30a1feNYuyuL6g3SFZ88cH0g" alt="London financial district at dusk"/>
+    <div class="absolute inset-0" style="background:rgba(91,45,142,0.08);pointer-events:none;"></div>
+    <div class="absolute bottom-6 left-6 bg-white rounded-2xl px-5 py-4 shadow-xl border border-outline-variant/40 flex items-center gap-4">
+      <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
+        <span class="material-symbols-outlined" style="font-size:18px;">location_on</span>
+      </div>
+      <div>
+        <p class="font-bold text-on-surface text-sm" style="letter-spacing:-0.01em;">London HQ</p>
+        <p class="text-secondary text-xs mt-0.5">Strategic Hub for Global Advisory</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer style="background:#1A1A2E;border-top:1px solid rgba(255,255,255,0.06);">
+  <div class="max-w-[1320px] mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div><a href="index.html" class="block mb-4"><img src="assets/logo.svg" alt="Essensia Solutions" style="height:122px;width:134px;" /></a><p class="text-white/40 text-sm leading-relaxed">Professional advisory for high-stakes business growth and compliance.</p></div>
+    <div><h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Services</h5><div class="flex flex-col gap-3"><a href="business-advisory.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Business Advisory</a><a href="hr-services.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">HR Services</a><a href="compliance.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Compliance &amp; Risk</a></div></div>
+    <div><h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Company</h5><div class="flex flex-col gap-3"><a href="about.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">About Us</a><a href="resources-coming-soon.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Resources</a><a href="contact.html" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">Contact</a></div></div>
+    <div><h5 class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">Contact</h5><div class="flex flex-col gap-3"><a href="mailto:info@essensiasolutions.com" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">info@essensiasolutions.com</a><a href="tel:03333390045" class="text-white/50 text-sm hover:text-white/80 transition-colors duration-200">03333390045</a><span class="text-white/40 text-sm">60 Tottenham Court Road, Office 856, London, England, W1T 2EW</span></div></div>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top:1px solid rgba(255,255,255,0.06);"><p class="text-white/30 text-sm">© 2025 Essensia Solutions. All rights reserved.</p><div class="flex gap-6"><a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Privacy Policy</a><a href="#" class="text-white/30 text-sm hover:text-white/60 transition-colors duration-200">Terms of Service</a></div></div>
+</footer>
+
+<script src="assets/nav.js"></script>
+<script>
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+  })();
+
+  function sendEnquiry(e) {
+    e.preventDefault();
+    var name = document.getElementById('enq-name').value.trim();
+    var email = document.getElementById('enq-email').value.trim();
+    var company = document.getElementById('enq-company').value.trim();
+    var message = document.getElementById('enq-message').value.trim();
+    var subject = encodeURIComponent('Enquiry from ' + (name || 'Website Visitor'));
+    var body = encodeURIComponent(
+      'Name: ' + (name || '—') + '\n' +
+      'Email: ' + (email || '—') + '\n' +
+      (company ? 'Company: ' + company + '\n' : '') +
+      '\nMessage:\n' + (message || '—')
+    );
+    window.location.href = 'mailto:info@essensiasolutions.com?subject=' + subject + '&body=' + body;
+  }
+</script>
+</body>
+</html>

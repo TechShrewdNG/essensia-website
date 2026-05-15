@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-highest": "#d5e3fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-tertiary-fixed": "#410003",
+                    "secondary-container": "#dfe2ec",
+                    "on-secondary-fixed-variant": "#43474e",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#61646c",
+                    "surface-container-high": "#dee9ff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#c3c6cf",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#0e1c2f",
+                    "primary": "#315595",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-surface-variant": "#434750",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-container": "#e7eeff",
+                    "tertiary": "#943832",
+                    "primary-container": "#4b6eaf",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#1e4584",
+                    "on-background": "#0e1c2f",
+                    "on-primary-container": "#f0f2ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#cddbf5",
+                    "surface": "#f9f9ff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed": "#ffdad6",
+                    "background": "#f9f9ff",
+                    "secondary": "#5b5e66",
+                    "inverse-surface": "#233145",
+                    "tertiary-container": "#b34f48",
+                    "on-tertiary-fixed-variant": "#7f2924",
+                    "outline": "#747781",
+                    "on-secondary-fixed": "#181c22",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "outline-variant": "#c3c6d2",
+                    "surface-variant": "#d5e3fe",
+                    "inverse-primary": "#adc7ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dfe2ec",
+                    "surface-tint": "#3a5d9d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-tertiary-container": "#ffefed"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9ff; }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-white/95 dark:bg-slate-900/95 shadow-sm dark:shadow-none border-b border-blue-100 dark:border-slate-800 top-0 sticky z-50">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<span class="text-xl font-bold tracking-tighter text-blue-800 dark:text-white font-manrope">Essensia Solutions</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Home</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">About</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Services</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Resources</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded hover:opacity-90 transition-all font-manrope font-semibold text-sm">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="max-w-[1280px] mx-auto px-6 pt-24 pb-16">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Your HR, Compliance &amp; Business Advisory Partner.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                We empower founders and leadership teams to transition from reactionary management to strategic, structured operations.
+            </p>
+</div>
+</header>
+<!-- Who We Are (Intro) -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl border-t border-blue-100">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md items-center">
+<div class="space-y-6">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Who We Are</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Precision in Practice.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Essensia Solutions was born from a simple realization: many ambitious businesses possess the vision but lack the structural scaffolding to scale safely and efficiently. We specialize in helping organizations move from informal "hustle" to mature, structured operations that support long-term growth and compliance.
+                </p>
+</div>
+<div class="aspect-video bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="A bright and airy corporate office space with large windows and minimalist furniture, reflecting a modern and professional atmosphere. The lighting is soft and natural, emphasizing a clean and organized workspace that suggests clarity and precision. The color palette is composed of cool blues and soft whites, matching a high-end advisory firm aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7_p6uICDvbkQnEP1cazPziJhAhtbRc7lVX8Ex_fDKlMNIog0agqAGB2CV4Dz2ilgGSbPHmAnw9fleXEUHcUS8W_Ly8q5VFEsx9iNkuOQe1YHaiHTVsqGfY9csrBW5_1RSuxvzc6XMjwNyM8poMPkuLaE6wMdERtDIXu4b6GC78Dfnycf2Ia-p1DChLQvW-WFeJAtYmuEbKNAoJGQfRt8NraNgvp29sLd7Ar5UMynAajPCe3NwJMG8Rx2aUIvB1fpF4qQ7lx6Biw"/>
+</div>
+</div>
+</section>
+<!-- Our Approach (Grid) -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Approach</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">A structured methodology designed for sustainable business impact.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-white p-8 border border-blue-100 rounded shadow-sm hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-2">Practical Implementation</h3>
+<p class="text-on-surface-variant font-body-md">We don't just provide theory; we build the actual systems your team will use daily.</p>
+</div>
+<div class="bg-white p-8 border border-blue-100 rounded shadow-sm hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">account_tree</span>
+<h3 class="font-headline-md text-headline-md mb-2">Structured Thinking</h3>
+<p class="text-on-surface-variant font-body-md">Decisions are backed by logic and data-driven frameworks, not just gut feeling.</p>
+</div>
+<div class="bg-white p-8 border border-blue-100 rounded shadow-sm hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">handshake</span>
+<h3 class="font-headline-md text-headline-md mb-2">Business Alignment</h3>
+<p class="text-on-surface-variant font-body-md">HR and compliance strategies that actively support your primary commercial goals.</p>
+</div>
+<div class="bg-white p-8 border border-blue-100 rounded shadow-sm hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">visibility</span>
+<h3 class="font-headline-md text-headline-md mb-2">Clarity</h3>
+<p class="text-on-surface-variant font-body-md">Removing ambiguity from your processes, contracts, and internal communications.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- What Makes Us Different & Focus -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">What Makes Us Different</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-full text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-on-surface-variant"><strong class="text-on-surface">Advisory First:</strong> We are partners in your journey, not just service providers. We take ownership of outcomes.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-full text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-on-surface-variant"><strong class="text-on-surface">Deep Compliance Expertise:</strong> Our roots in legal and HR compliance ensure your foundations are bulletproof.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-full text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-on-surface-variant"><strong class="text-on-surface">Modular Solutions:</strong> We design systems that scale with you, preventing the need for costly overhauls.</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-7 bg-inverse-surface p-12 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-8 text-surface-container-highest">Our Strategic Focus</h2>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 p-6 border border-white/20 rounded bg-white/5">
+<div class="text-primary-fixed-dim text-sm uppercase tracking-tighter mb-2">Before</div>
+<p class="font-headline-md text-white/60 line-through">Unclear / Inconsistent</p>
+<p class="text-white/40 text-sm mt-4 italic">Reactionary decisions, high turnover, compliance risks.</p>
+</div>
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">trending_flat</span>
+</div>
+<div class="flex-1 p-6 border border-primary-container rounded bg-primary-container/30">
+<div class="text-primary-fixed text-sm uppercase tracking-tighter mb-2">After</div>
+<p class="font-headline-md text-white">Clear / Consistent</p>
+<p class="text-white/80 text-sm mt-4 font-medium">Predictable growth, strong culture, rigid compliance.</p>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</div>
+</section>
+<!-- Who We Work With -->
+<section class="bg-surface py-xl">
+<div class="max-w-[1280px] mx-auto px-6 text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Who We Work With</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white border border-outline-variant p-10 rounded shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">rocket_launch</span>
+<h3 class="font-headline-md text-on-surface mb-3">Startups</h3>
+<p class="text-on-surface-variant font-body-md">Building the right culture and compliance framework from day zero.</p>
+</div>
+<div class="bg-white border border-outline-variant p-10 rounded shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">person_celebrate</span>
+<h3 class="font-headline-md text-on-surface mb-3">Founder-led</h3>
+<p class="text-on-surface-variant font-body-md">Helping leaders step back from operations and trust their systems.</p>
+</div>
+<div class="bg-white border border-outline-variant p-10 rounded shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">engineering</span>
+<h3 class="font-headline-md text-on-surface mb-3">Service-based</h3>
+<p class="text-on-surface-variant font-body-md">Standardizing service delivery through rigorous process mapping.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About the Founder -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5">
+<div class="aspect-[4/5] rounded-xl overflow-hidden border-8 border-surface-container shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a confident female executive with a warm but authoritative presence. She is dressed in a smart navy blue blazer, standing against a neutral architectural background that suggests a high-end corporate setting. The lighting is sophisticated, with soft Rembrandt lighting highlighting her features, conveying intelligence and trustworthiness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYkkGajsiYp3C0WB59tapnarPNSt-0jAXsDRQmLXQwqb3BkxswBHE2EuWd7-fGwyKewWRZeQ-zSQcOXUPr9oGB8zGDlKSRxdyDSC5bDRoL3mgxr24v6ULGtP-AnjqKtNnJvtOVEx7JF5UT8cjR1ChuNO-ohwPz2RmOFYQ5OIRs2_aVjGEToaqeVP8aR_eweJ2vVrwe5W-jmlWbNF8gn5Xd9tYC8aInaf822wTRzTEhae3iwykK7nLqqmGHIrsqCPTcslgljgIPIg"/>
+</div>
+</div>
+<div class="md:col-span-7 space-y-6">
+<div class="inline-block px-4 py-1 bg-surface-container-high rounded-full">
+<span class="font-label-md text-primary">Founder Spotlight</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Meet Rakiya Omaki</h2>
+<p class="font-body-lg text-on-surface-variant italic leading-relaxed">
+                    "My mission is to transform the way businesses approach their most valuable asset: their people and their processes. Structure isn't about restriction; it's about freedom to scale."
+                </p>
+<div class="space-y-4 font-body-md text-on-surface-variant">
+<p>With over a decade of experience in HR Strategy and Legal Compliance, Rakiya has served as a bridge between ambitious business goals and sustainable operational reality.</p>
+<p>Her focus is on developing lean, efficient organizations where founders can focus on vision while Essensia ensures the engine of the business runs flawlessly.</p>
+</div>
+<div class="pt-4 flex gap-4">
+<a class="text-primary hover:underline font-semibold flex items-center gap-2" href="#">
+                        View Profile <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="bg-primary text-white rounded-xl p-12 text-center shadow-lg">
+<h2 class="font-headline-lg text-headline-lg mb-6">Looking for practical, structured support?</h2>
+<p class="text-primary-fixed mb-10 max-w-2xl mx-auto">Take the first step toward operational excellence. Let's discuss how we can align your HR and business strategy.</p>
+<button class="bg-white text-primary px-10 py-4 rounded font-semibold hover:bg-surface-container-low transition-colors shadow-md">
+                Book a Consultation
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-blue-100 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-blue-800 dark:text-white font-manrope">Essensia Solutions</span>
+<p class="mt-4 font-manrope text-sm text-slate-500 dark:text-slate-400">Structured advisory for the modern business landscape.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-manrope text-sm font-bold text-on-surface">Services</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">HR Strategy</a>
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Compliance</a>
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Advisory</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-manrope text-sm font-bold text-on-surface">Company</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">About</a>
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Resources</a>
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-manrope text-sm font-bold text-on-surface">Legal</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 py-6 border-t border-blue-100 dark:border-slate-800 text-center">
+<p class="font-manrope text-sm text-slate-500 dark:text-slate-400">© 2024 Essensia Solutions. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

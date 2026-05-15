@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-container-highest": "#d5e3fe",
+                        "on-primary-fixed": "#001a41",
+                        "on-tertiary-fixed": "#410003",
+                        "secondary-container": "#dfe2ec",
+                        "on-secondary-fixed-variant": "#43474e",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#61646c",
+                        "surface-container-high": "#dee9ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c3c6cf",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#0e1c2f",
+                        "primary": "#315595",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-surface-variant": "#434750",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container": "#e7eeff",
+                        "tertiary": "#943832",
+                        "primary-container": "#4b6eaf",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#1e4584",
+                        "on-background": "#0e1c2f",
+                        "on-primary-container": "#f0f2ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#cddbf5",
+                        "surface": "#f9f9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed": "#ffdad6",
+                        "background": "#f9f9ff",
+                        "secondary": "#5b5e66",
+                        "inverse-surface": "#233145",
+                        "tertiary-container": "#b34f48",
+                        "on-tertiary-fixed-variant": "#7f2924",
+                        "outline": "#747781",
+                        "on-secondary-fixed": "#181c22",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "outline-variant": "#c3c6d2",
+                        "surface-variant": "#d5e3fe",
+                        "inverse-primary": "#adc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dfe2ec",
+                        "surface-tint": "#3a5d9d",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-tertiary-container": "#ffefed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-white/95 sticky top-0 z-50 border-b border-blue-100 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold tracking-tighter text-blue-800">Essensia Solutions</div>
+<nav class="hidden md:flex items-center gap-margin">
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Home</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">About</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="#">Services</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Resources</a>
+<a class="font-manrope font-semibold text-sm tracking-tight text-slate-600 hover:text-blue-700 transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-label-md hover:bg-primary transition-all">Get Started</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-xl pb-lg overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6 grid md:grid-cols-2 gap-xl items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-3 rounded-full bg-surface-container-high text-primary font-label-md mb-md">Risk Advisory 2024</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">Is your business actually compliant - or just assuming it is?</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-lg max-w-xl">Assumption is the greatest risk to operational continuity. We provide the rigorous oversight needed to turn compliance from a liability into a strategic advantage.</p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-md shadow-md hover:translate-y-[-2px] transition-all">Book a Compliance Review</button>
+<button class="border border-outline-variant text-primary px-8 py-4 rounded-lg font-label-md hover:bg-surface-container-low transition-all">Our Methodology</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl"></div>
+<div class="relative bg-white p-2 rounded-xl border border-outline-variant shadow-lg rotate-2">
+<img alt="Compliance Review" class="rounded-lg w-full h-[400px] object-cover" data-alt="A professional, high-end close-up shot of a modern glass-walled boardroom in a corporate skyscraper. Soft morning sunlight streams through large windows, illuminating a polished dark wood table and minimalist ergonomic chairs. On the table sits a sleek, open laptop showing complex data charts and a leather-bound professional folder. The atmosphere is quiet, authoritative, and sophisticated, reflecting an environment of high-stakes business consulting and executive decision-making." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxvjbAz5fssGkzacHaQW6esvGGJG_tsyROzRb74Ec4v8zjj6d1kVXkJyEx9b958raVT_q2t5havZLSmOar_k6FLkF5AmB2rqT8Vp1JZ3U53LYlOClvxcUPieEzE86D7MmzR8YNEXAGmWcgcNmCjBOApJDUofdLpgpTIdG5wE8RBJBLDeZrIb81Cjw8oC5P2MzLFOZdcZfH7dHATKLE6q8y28lHB21TmxSV3VVX1W5zmFky60J6wfsaHPPmLK2_aEBl9hPmU0I3zQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Pitfalls: Where businesses get caught out -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Where businesses get caught out</h2>
+<p class="font-body-md text-secondary">The regulatory landscape shifts daily. Most organizations fail not through negligence, but through outdated processes and fragmented oversight.</p>
+</div>
+<div class="text-primary font-label-md border-b-2 border-primary-fixed-dim pb-1 flex items-center gap-xs cursor-pointer">
+                    Identify Your Gaps <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-md">
+<!-- Pitfall 1 -->
+<div class="bg-white p-md rounded-xl border border-outline-variant hover:border-primary transition-all">
+<div class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-error-container">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Regulatory Drifting</h3>
+<p class="text-secondary font-body-md">Policies that were compliant two years ago often fall behind current legislative benchmarks, creating unseen legal exposure.</p>
+</div>
+<!-- Pitfall 2 -->
+<div class="bg-white p-md rounded-xl border border-outline-variant hover:border-primary transition-all">
+<div class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-error-container">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Execution Gaps</h3>
+<p class="text-secondary font-body-md">Having a manual is not compliance. The mismatch between written policy and actual daily operational practice is the #1 audit failure.</p>
+</div>
+<!-- Pitfall 3 -->
+<div class="bg-white p-md rounded-xl border border-outline-variant hover:border-primary transition-all">
+<div class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-error-container">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Oversight Silos</h3>
+<p class="text-secondary font-body-md">When legal, HR, and finance operate in silos, critical compliance interdependencies are missed, leading to systemic vulnerabilities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How we fix this: Approach -->
+<section class="py-xl bg-white">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-md">
+<div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+<h4 class="font-label-md text-primary mb-xs">Step 01</h4>
+<p class="font-headline-md text-on-surface leading-tight mb-xs">Diagnostic</p>
+<p class="text-sm text-secondary">Full-spectrum analysis of current operational risk levels.</p>
+</div>
+<div class="bg-primary-container rounded-xl p-md text-on-primary-container shadow-lg">
+<h4 class="font-label-md text-primary-fixed mb-xs">Step 02</h4>
+<p class="font-headline-md leading-tight mb-xs">Strategy</p>
+<p class="text-sm opacity-90">Bespoke framework development tailored to your industry.</p>
+</div>
+</div>
+<div class="space-y-md pt-lg">
+<div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+<h4 class="font-label-md text-primary mb-xs">Step 03</h4>
+<p class="font-headline-md text-on-surface leading-tight mb-xs">Deployment</p>
+<p class="text-sm text-secondary">Active implementation of governance and automation.</p>
+</div>
+<div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+<h4 class="font-label-md text-primary mb-xs">Step 04</h4>
+<p class="font-headline-md text-on-surface leading-tight mb-xs">Vigilance</p>
+<p class="text-sm text-secondary">Continuous monitoring and quarterly audit cycles.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-md">How we fix this</h2>
+<p class="font-body-lg text-secondary mb-lg">Our approach is not about creating red tape—it's about building a robust foundation that allows your leadership team to focus on growth without the weight of regulatory uncertainty.</p>
+<ul class="space-y-md">
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<div>
+<span class="font-semibold block">Regulatory Mapping</span>
+<p class="text-secondary text-sm">Aligning every business function with current local and international laws.</p>
+</div>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<div>
+<span class="font-semibold block">Governance Automation</span>
+<p class="text-secondary text-sm">Deploying systems that flag non-compliance before it becomes a reportable incident.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Audit Breakdown: Bento Style -->
+<section class="bg-on-surface py-xl text-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Compliance Audit &amp; Review</h2>
+<p class="text-slate-400 max-w-xl mx-auto">Scalable solutions ranging from quick health checks to comprehensive organizational overhaul.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Essential Review -->
+<div class="md:col-span-4 bg-slate-800/50 border border-slate-700 p-lg rounded-xl flex flex-col">
+<div class="mb-md">
+<span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs font-semibold tracking-wider uppercase">Baseline</span>
+</div>
+<h3 class="font-headline-md mb-sm">Essential Review</h3>
+<p class="text-slate-400 font-body-md mb-lg flex-grow">A high-level diagnostic focusing on critical risk vectors and immediate legal red flags. Best for startups and small firms.</p>
+<ul class="space-y-sm mb-lg">
+<li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-blue-400 text-body-md">check</span> 3-Day Diagnostic</li>
+<li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-blue-400 text-body-md">check</span> Critical Gap Report</li>
+<li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-blue-400 text-body-md">check</span> Executive Summary</li>
+</ul>
+<button class="w-full py-3 border border-slate-600 rounded-lg font-label-md hover:bg-slate-700 transition-colors">Select Review</button>
+</div>
+<!-- Full Audit -->
+<div class="md:col-span-8 bg-primary-container p-lg rounded-xl flex flex-col md:flex-row gap-lg relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 100;">verified_user</span>
+</div>
+<div class="md:w-1/2 z-10">
+<div class="mb-md">
+<span class="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-semibold tracking-wider uppercase">Gold Standard</span>
+</div>
+<h3 class="font-headline-md mb-sm text-white">Full Regulatory Audit</h3>
+<p class="text-blue-100 font-body-md mb-lg">A deep-dive investigative audit into every operational facet. We leave no stone unturned, providing a certified compliance baseline.</p>
+<div class="grid grid-cols-2 gap-sm text-sm text-white/80">
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-white text-sm">done_all</span> HR &amp; Payroll</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-white text-sm">done_all</span> Data Privacy</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-white text-sm">done_all</span> Finance/AML</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-white text-sm">done_all</span> Ops Safety</div>
+</div>
+</div>
+<div class="md:w-1/2 bg-white/10 backdrop-blur-md rounded-lg p-md border border-white/10 flex flex-col justify-center z-10">
+<p class="text-sm font-semibold mb-sm uppercase tracking-widest text-blue-200">Includes Implementation Plan</p>
+<p class="text-xs text-blue-50 mb-md">We don't just find the problems; we map out the exact sequence of technical and cultural fixes required for total compliance.</p>
+<button class="w-full py-3 bg-white text-primary rounded-lg font-label-md hover:bg-blue-50 transition-colors shadow-lg">Request Full Audit</button>
+</div>
+</div>
+<!-- Specialized Support -->
+<div class="md:col-span-12 bg-surface-container-low text-on-surface p-lg rounded-xl border border-outline-variant flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="max-w-2xl">
+<h3 class="font-headline-md mb-xs">Sponsorship &amp; Regulated Environments</h3>
+<p class="text-secondary">Specialized support for firms with visa sponsorship licenses, medical regulations, or high-security financial reporting requirements.</p>
+</div>
+<button class="whitespace-nowrap px-8 py-4 bg-on-surface text-white rounded-lg font-label-md hover:bg-slate-800 transition-all">Complex Support Desk</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcomes: Benefits -->
+<section class="py-xl">
+<div class="max-w-[1280px] mx-auto px-6">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">The Outcome</h2>
+<div class="grid md:grid-cols-4 gap-md text-center">
+<div class="p-md">
+<div class="text-display-lg text-primary mb-xs">0%</div>
+<p class="font-semibold text-on-surface mb-xs">Non-Compliance</p>
+<p class="text-sm text-secondary">Total alignment with current statutory requirements.</p>
+</div>
+<div class="p-md">
+<div class="text-display-lg text-primary mb-xs">24/7</div>
+<p class="font-semibold text-on-surface mb-xs">Active Vigilance</p>
+<p class="text-sm text-secondary">Automated monitoring for regulatory shifts.</p>
+</div>
+<div class="p-md">
+<div class="text-display-lg text-primary mb-xs">100%</div>
+<p class="font-semibold text-on-surface mb-xs">Audit-Ready</p>
+<p class="text-sm text-secondary">Instantly accessible documentation for external audits.</p>
+</div>
+<div class="p-md">
+<div class="text-display-lg text-primary mb-xs">Low</div>
+<p class="font-semibold text-on-surface mb-xs">Premium Risk</p>
+<p class="text-sm text-secondary">Potential reduction in professional indemnity costs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-[1280px] mx-auto px-6 mb-xl">
+<div class="bg-surface-container-high rounded-full px-xl py-lg flex flex-col md:flex-row items-center justify-between gap-md border border-blue-100">
+<div>
+<h3 class="font-headline-md text-on-surface">Understand your compliance position before issues arise.</h3>
+<p class="text-primary font-medium">Protect your brand, your leadership, and your bottom line.</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-margin py-4 rounded-full font-label-md shadow-md hover:bg-primary transition-all flex items-center gap-sm">
+                Book a Compliance Review <span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white border-t border-blue-100">
+<div class="max-w-[1280px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-blue-800">Essensia Solutions</div>
+<p class="text-slate-500 text-sm leading-relaxed">High-stakes HR and compliance advisory for founders who demand excellence and uncompromising precision.</p>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface mb-4">Strategic Advisory</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-slate-500 hover:text-blue-600 transition-opacity text-sm" href="#">HR Strategy</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity text-sm" href="#">Compliance</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity text-sm" href="#">Advisory</a>
+</nav>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface mb-4">Legal</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-slate-500 hover:text-blue-600 transition-opacity text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-blue-600 transition-opacity text-sm" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-semibold text-on-surface mb-4 text-sm uppercase tracking-widest">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 py-6 border-t border-slate-100 text-center text-slate-400 text-xs">
+            © 2024 Essensia Solutions. All rights reserved.
+        </div>
+</footer>
+</body></html>
