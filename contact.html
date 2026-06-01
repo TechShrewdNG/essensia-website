@@ -175,28 +175,37 @@
       </div>
     </div>
 
-    <form class="space-y-5" onsubmit="sendEnquiry(event);">
+    <form id="enquiry-form" class="space-y-5" onsubmit="sendEnquiry(event);">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+      <input type="hidden" name="subject" value="New Enquiry – Essensia Solutions Website"/>
+      <input type="hidden" name="from_name" value="Essensia Website"/>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label class="form-label">Full Name</label>
-          <input id="enq-name" type="text" class="form-input" placeholder="Your full name"/>
+          <input id="enq-name" name="name" type="text" class="form-input" placeholder="Your full name" required/>
         </div>
         <div>
           <label class="form-label">Email Address</label>
-          <input id="enq-email" type="email" class="form-input" placeholder="your@company.com"/>
+          <input id="enq-email" name="email" type="email" class="form-input" placeholder="your@company.com" required/>
         </div>
       </div>
       <div>
         <label class="form-label">Company (optional)</label>
-        <input id="enq-company" type="text" class="form-input" placeholder="Your company name"/>
+        <input id="enq-company" name="company" type="text" class="form-input" placeholder="Your company name"/>
       </div>
       <div>
         <label class="form-label">How can we help?</label>
-        <textarea id="enq-message" class="form-input resize-none" rows="4" placeholder="Tell us about your business challenges..."></textarea>
+        <textarea id="enq-message" name="message" class="form-input resize-none" rows="4" placeholder="Tell us about your business challenges..." required></textarea>
       </div>
-      <button type="submit" class="btn-primary w-full bg-primary text-white py-4 rounded-2xl font-semibold text-sm flex justify-center items-center gap-2">
+      <button id="enq-submit" type="submit" class="btn-primary w-full bg-primary text-white py-4 rounded-2xl font-semibold text-sm flex justify-center items-center gap-2">
         Submit Enquiry <span class="material-symbols-outlined" style="font-size:16px;">send</span>
       </button>
+      <div id="enq-success" class="hidden rounded-2xl bg-green-50 border border-green-200 px-6 py-4 text-sm font-medium text-green-800">
+        Thank you — we've received your enquiry and will respond within one business day.
+      </div>
+      <div id="enq-error" class="hidden rounded-2xl bg-red-50 border border-red-200 px-6 py-4 text-sm font-medium text-red-800">
+        Something went wrong. Please try again or email us directly at <a href="mailto:info@essensiasolutions.com" class="underline">info@essensiasolutions.com</a>.
+      </div>
     </form>
   </div>
 
@@ -236,20 +245,38 @@
     document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
   })();
 
-  function sendEnquiry(e) {
+  async function sendEnquiry(e) {
     e.preventDefault();
-    var name = document.getElementById('enq-name').value.trim();
-    var email = document.getElementById('enq-email').value.trim();
-    var company = document.getElementById('enq-company').value.trim();
-    var message = document.getElementById('enq-message').value.trim();
-    var subject = encodeURIComponent('Enquiry from ' + (name || 'Website Visitor'));
-    var body = encodeURIComponent(
-      'Name: ' + (name || '—') + '\n' +
-      'Email: ' + (email || '—') + '\n' +
-      (company ? 'Company: ' + company + '\n' : '') +
-      '\nMessage:\n' + (message || '—')
-    );
-    window.location.href = 'mailto:info@essensiasolutions.com?subject=' + subject + '&body=' + body;
+    var form = document.getElementById('enquiry-form');
+    var btn = document.getElementById('enq-submit');
+    var successMsg = document.getElementById('enq-success');
+    var errorMsg = document.getElementById('enq-error');
+
+    btn.disabled = true;
+    btn.innerHTML = 'Sending… <span class="material-symbols-outlined" style="font-size:16px;">hourglass_empty</span>';
+    successMsg.classList.add('hidden');
+    errorMsg.classList.add('hidden');
+
+    try {
+      var data = Object.fromEntries(new FormData(form));
+      var res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      var json = await res.json();
+      if (res.ok && json.success) {
+        form.reset();
+        successMsg.classList.remove('hidden');
+      } else {
+        errorMsg.classList.remove('hidden');
+      }
+    } catch (err) {
+      errorMsg.classList.remove('hidden');
+    }
+
+    btn.disabled = false;
+    btn.innerHTML = 'Submit Enquiry <span class="material-symbols-outlined" style="font-size:16px;">send</span>';
   }
 </script>
 </body>
